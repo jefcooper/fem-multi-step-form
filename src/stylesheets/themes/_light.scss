@@ -8,7 +8,7 @@
 @mixin theme---light {
   --theme-text-regular: #{$clr-neutral-400};
   --theme-text-dark: #{$clr-primary-800};
-  --theme-bg: #{$clr-neutral-100};
+  --theme-bg: #{$clr-primary-100};
 
   --theme-accent-red: #{$clr-accent-red};
 }

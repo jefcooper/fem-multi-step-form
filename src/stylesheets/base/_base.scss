@@ -11,12 +11,10 @@
 body {
   font-family: $ff-base;
   font-weight: $fw-regular;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.667;
-  letter-spacing: -0.23px;
   color: var(--theme-text-regular);
   background-color: var(--theme-bg);
-  transition: 0.4s ease-in-out;
 }
 
 /**
