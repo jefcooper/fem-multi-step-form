@@ -7,7 +7,10 @@
  ****************************************************************************/
 
 // get the div to contain the form
-const formDiv = document.querySelector("[data-wizard-form]");
+const wizardForm = document.querySelector("[data-wizard-form]");
+const stepIndicatorList = Array.from(
+  document.querySelector("[data-wizard-steps]").children
+);
 const btnNext = document.querySelector("[data-wizard-form-next]");
 const btnPrev = document.querySelector("[data-wizard-form-previous]");
 const btnFinished = document.querySelector("[data-wizard-form-finished]");
@@ -25,7 +28,7 @@ if (steps.length > 1) {
 btnNext?.addEventListener("click", (evt) => {
   if (currentStep < steps.length - 1) {
     currentStep += 1;
-    showFormStep(currentStep, formDiv, steps);
+    showFormStep(currentStep, steps);
   }
   // if we're at end, then set the button to disabled
   if (currentStep === steps.length - 1) {
@@ -39,7 +42,7 @@ btnNext?.addEventListener("click", (evt) => {
 btnPrev?.addEventListener("click", (evt) => {
   if (currentStep > 0) {
     currentStep -= 1;
-    showFormStep(currentStep, formDiv, steps);
+    showFormStep(currentStep, steps);
   }
   // if we're at start, then disable btnPrev
   if (currentStep === 0) {
@@ -52,7 +55,7 @@ btnPrev?.addEventListener("click", (evt) => {
 });
 
 // show initial form step
-showFormStep(currentStep, formDiv, steps);
+showFormStep(currentStep, steps);
 
 /**
  * getFormSteps
@@ -64,30 +67,27 @@ showFormStep(currentStep, formDiv, steps);
  * @returns map
  */
 function getFormSteps() {
-  // get steps from document and sort in numeric order of steps
-  // note that these numbers are sparse to allow gaps and reordering
-  // for example, may use step numbers 100, 200, 300, etc.
-  const steps = Array.from(
-    document.querySelectorAll("[data-wizard-form-step]")
-  ).sort(
-    (a, b) =>
-      tryParseInt(a.getAttribute("data-wizard-form-step")) -
-      tryParseInt(b.getAttribute("data-wizard-form-step"))
-  );
-
-  // re-map steps to have a monotonically increasing step number (idx)
-  return steps.map((step, idx) => ({
-    stepNumber: idx,
-    step: step,
-  }));
+  // all direct children of the wizard form are tabs in the form
+  return Array.from(wizardForm.children);
 }
 
-function showFormStep(step, form, allSteps) {
-  const template = allSteps[step].step;
-
-  const clone = template.content.cloneNode(true);
-  form.textContent = "";
-  form.appendChild(clone);
+function showFormStep(stepNumber, allSteps) {
+  allSteps.forEach((step, idx) => {
+    if (idx === stepNumber) {
+      step.style.display = "grid";
+    } else {
+      step.style.display = "none";
+    }
+  });
+  if (stepNumber < stepIndicatorList.length) {
+    stepIndicatorList.forEach((indicator, idx) => {
+      if (idx == stepNumber) {
+        indicator.setAttribute("aria-current", "step");
+      } else {
+        indicator.removeAttribute("aria-current");
+      }
+    });
+  }
 }
 
 /**
