@@ -1,0 +1,36 @@
+/*****************************************************************************
+ * typography
+ *
+ *  Type hierarchy for the site.
+ *
+ *****************************************************************************/
+
+/*---------------------------------------------------------------------------
+ * Default and mobile typography
+ *--------------------------------------------------------------------------*/
+
+%regular-text-properties {
+  font-family: $ff-base;
+  font-weight: $fw-bold;
+  font-size: pxToRem(14px);
+  line-height: pxLineHeight(14px, 17px);
+  color: var(--theme-text-regular);
+}
+
+/**
+ * Hero Section Title - Next generation digital banking
+ */
+.heading--1 {
+  font-family: $ff-base;
+  font-weight: $fw-bold;
+  font-size: pxToRem(24px);
+  line-height: pxLineHeight(24px, 29px);
+  text-align: left;
+  color: var(--theme-text-dark);
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include media-breakpoint("tablet") {
+}

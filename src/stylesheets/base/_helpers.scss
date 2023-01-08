@@ -1,0 +1,41 @@
+/*****************************************************************************
+ * Helper Classes
+ *
+ *  Reusable utility classes.
+ *
+ *****************************************************************************/
+
+@use "sass:math";
+
+/**
+ * .visually-hidden
+ */
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+/**
+ * .container
+ *
+ *  constrain the maximum width on desktop and add a margin
+ *  when within the max-width.
+ */
+.container > * {
+  --_container-margin: #{$container-margin}; /* mobile is default */
+  --_container-max-width: #{$container-max-width}; /* desktop max width */
+
+  max-width: var(--_container-max-width);
+  margin-inline: max(
+    50vw - var(--_container-max-width) / 2,
+    var(--_container-margin)
+  );
+}

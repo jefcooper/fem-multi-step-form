@@ -1,0 +1,27 @@
+/*****************************************************************************
+ * theme default
+ *
+ *  This theme is generated twice under different media queries.
+ *  This means that when the .theme--default class is attached to body, then
+ *  the page will receive custom CSS properties that depend on the system
+ *  theme.
+ *
+ *  theme---light and theme---dark are Sass mixins that are reused
+ *  both here and in their respective theme classes.  theme---light is used to
+ *  define .theme--light, and likewise theme---dark is used to define
+ *  .theme--dark.
+ *
+ *  So by switching the class on body from .theme--default to .theme--light/dark
+ *  we can explicitly override the automatic selection in .theme--default.
+ *
+ *****************************************************************************/
+
+//@media (prefers-color-scheme: "light") {}
+:root {
+  // indicate preference to the browser
+  color-scheme: light;
+}
+
+.theme--default {
+  @include theme---light;
+}

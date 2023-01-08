@@ -1,0 +1,83 @@
+/*****************************************************************************
+ * icons 
+ *
+ *  Definitions for various svg icons used throughout the site.
+ *
+ *****************************************************************************/
+
+/**
+ * .icon
+ *
+ *  utility class to define clickable svg icon behavior.  Note this is
+ *  located with the individual icons due to BEM naming consistency.
+ */
+.icon {
+  user-select: none;
+  cursor: pointer;
+  transition: 150ms ease-in-out; /* soften hover transition, not so abrupt */
+
+  fill: currentcolor;
+}
+.icon:hover {
+  fill: var(--theme-hover-highlight);
+}
+
+/**
+ * .icon--down
+ *
+ *  Down arrow
+ */
+.icon--down {
+  width: 8px;
+  height: 4px;
+}
+
+/**
+ * .icon--up
+ *
+ *  Up arrow
+ */
+.icon--up {
+  width: 8px;
+  height: 4px;
+}
+
+/**
+ * .icon--facebook
+ *
+ *  Facebook company logo, used in footer.
+ */
+.icon--facebook {
+  width: 20px;
+  height: 20px;
+}
+
+/**
+ * .icon--youtube
+ *
+ * YouTube logo
+ */
+.icon--youtube {
+  width: 20px;
+  height: 20px;
+}
+
+/**
+ * .icon--instagram
+ *
+ *  Instagram company logo, used in footer.
+ */
+.icon--instagram {
+  width: 20px;
+  height: 20px;
+}
+
+/**
+ * .icon--twitter
+ *
+ *  Twitter company logo, used in footer.
+ */
+.icon--twitter {
+  width: 20px;
+  height: 17px;
+}
