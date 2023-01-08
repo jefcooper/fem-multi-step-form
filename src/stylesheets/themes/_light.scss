@@ -6,56 +6,11 @@
 @use "sass:color";
 
 @mixin theme---light {
-  --theme-text-dark: #{$clr-neutral-900};
-  --theme-text-regular: #{$clr-neutral-600};
-  --theme-text-red: #{$clr-accent-red};
-  --theme-text-green: #{$clr-accent-green};
-
+  --theme-text-regular: #{$clr-neutral-400};
+  --theme-text-dark: #{$clr-primary-800};
   --theme-bg: #{$clr-neutral-100};
 
-  // four bg's.  dark, white, light-gray, medium-gray
-  --theme-bg-100: #{$clr-neutral-100};
-  --theme-bg-200: #{$clr-neutral-200};
-  --theme-bg-400: #{$clr-neutral-300};
-  --theme-bg-900: #{$clr-neutral-900};
-  --theme-bg-900-400: #{color.change($clr-neutral-900, $alpha: 0.5)};
-
-  --theme-txt-100-400: #{color.change($clr-neutral-100, $alpha: 0.5)};
-  --theme-txt-100: #{$clr-neutral-100};
-  --theme-txt-400: #{$clr-neutral-500};
-  --theme-txt-900: #{$clr-neutral-900};
-
-  --theme-accent-400: #{$clr-accent-red};
-  --theme-btn-txt: #{$clr-neutral-100};
-  --theme-btn-bg: linear-gradient(
-    135deg,
-    #{$clr-accent-red},
-    #{$clr-accent-green}
-  );
-  --theme-hover-highlight: #{$clr-accent-red};
-
-  // menu colors
-  --theme-menu-text: #{$clr-neutral-300};
-  --theme-menu-text-highlight: #{$clr-neutral-500};
-  --theme-menu-accent: #{$clr-accent-red};
-  --theme-menu-background: #{$clr-neutral-100};
-  --theme-menu-popup-color: #{$clr-neutral-900};
-  --theme-menu-popup-background: #{$clr-neutral-100};
-  --theme-menu-overlay: linear-gradient(
-    #{$clr-neutral-900},
-    #{color.change($clr-neutral-900, $alpha: 0)}
-  );
-  --theme-slider-bg: #{$grad-toggle-gray};
-  --theme-slider-hover: #{$grad-toggle};
-  --theme-slider-thumb: #{$clr-neutral-300};
-  --theme-slider-focus: #{$clr-accent-red};
-
-  --theme-header-bg: #{$clr-neutral-250};
-  --theme-header-hr: #{$clr-neutral-450};
-  --theme-followers-bg: #{$clr-neutral-350};
-  --theme-followers-hover: #{$clr-neutral-375};
-  --theme-impressions-bg: #{$clr-neutral-350};
-  --theme-impressions-hover: #{$clr-neutral-375};
+  --theme-accent-red: #{$clr-accent-red};
 }
 
 .theme--light {
