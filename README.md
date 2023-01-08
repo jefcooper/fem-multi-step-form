@@ -50,6 +50,11 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 ### Useful resources
 
+YouTube video, _Multi Step Form with Step Progress Bar in HTML CSS & JavaScript [Part -1]_
+
+- https://www.youtube.com/watch?v=FKIafz8qgpk
+- https://www.youtube.com/watch?v=UldBI0fdMJw&t=0s
+
 #### Tooling
 
 - https://www.joshwcomeau.com/css/custom-css-reset/
