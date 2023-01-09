@@ -1,0 +1,34 @@
+/******************************************************************************
+ * radio-card
+ *
+ *  Custom styling around a radio button, <input type="radio">
+ *
+ *  Styling is included for a <fieldset> and <legend> element associated to
+ *  create groups of radio buttons.
+ *
+ ******************************************************************************/
+
+/**
+ * radio-card - group of elements related to an individual selection
+ */
+.radio-card {
+}
+
+/**
+ * radio-card__fieldset - fieldset element containing inputs
+ */
+.radio-card__fieldset {
+  width: 100%;
+}
+
+/**
+ * radio-card__legend - legend element used as heading
+ */
+.radio-card__legend {
+}
+
+/**
+ * radio-card__input - the input element in the radio-card
+ */
+.radio-card__input {
+}

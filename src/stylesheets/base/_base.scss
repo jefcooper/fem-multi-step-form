@@ -49,5 +49,7 @@ ul {
 @include media-breakpoint("tablet") {
   body {
     background-image: none;
+    align-content: center;
+    place-items: center;
   }
 }
