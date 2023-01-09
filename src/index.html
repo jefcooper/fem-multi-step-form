@@ -45,7 +45,7 @@
       </ol>
     </aside>
 
-    <form action="#" class="wizard-form" data-wizard-form>
+    <form action="#" id="wizard-form" class="wizard-form" data-wizard-form>
       <section class="wizard-form__tab">
         <!-- Step 1 start -->
         <h1 class="heading--1 signup-form__title">Personal info</h1>
@@ -54,18 +54,24 @@
           Please provide your name, email address, and phone number.
         </p>
 
-        <label for="personal-info__name" class="form--label">
-          Name
-        </label>
-        <input type="text" id="personal-info__name" class="personal-info__name" placeholder="e.g. Stephen King">
+        <div class="input__group">
+          <label for="personal-info__name" class="form--label input__label">
+            Name
+          </label>
+          <input type="text" id="personal-info__name" class="input personal-info__name" placeholder="e.g. Stephen King">
+        </div>
 
-        <label for="personal-info__email" class="form--label">Email Address</label>
-        <input type="email" id="personal-info__email" class="personal-info__email"
-          placeholder="e.g. stephenking@lorem.com">
+        <div class="input__group">
+          <label for="personal-info__email" class="input__label form--label">Email Address</label>
+          <input type="email" id="personal-info__email" class="input personal-info__email"
+            placeholder="e.g. stephenking@lorem.com">
+        </div>
 
-        <label for="personal-info__phone" class="form--label">Phone Number</label>
-        <input type="tel" id="personal-info__tel" class="personal-info__tel"
-          placeholder="e.g. +1 234 567 890 Next Step">
+        <div class="input__group">
+          <label for="personal-info__phone" class="form--label input__label">Phone Number</label>
+          <input type="tel" id="personal-info__tel" class="input personal-info__tel"
+            placeholder="e.g. +1 234 567 890 Next Step">
+        </div>
       </section>
       <section class="wizard-form__tab">
         <!-- Step 2 start -->
@@ -163,8 +169,8 @@
     <div class="signup-form__buttons">
       <button type="button" class="btn wizard-form__btn-previous" data-wizard-form-previous>Go Back</button>
       <button type="button" class="btn btn--secondary wizard-form__btn-next" data-wizard-form-next>Next Step</button>
-      <button type="button" class="btn btn--primary wizard-form__btn-finished"
-        data-wizard-form-finished>Confirm</button>
+      <button type="submit" class="btn btn--primary wizard-form__btn-finished" data-wizard-form-finished
+        form="wizard-form">Confirm</button>
     </div>
 
   </main>

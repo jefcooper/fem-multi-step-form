@@ -11,5 +11,5 @@
 }
 
 @function pxLineHeight($fontPx, $linePx) {
-  @return math.div($fontPx, $linePx);
+  @return math.div($linePx, $fontPx);
 }

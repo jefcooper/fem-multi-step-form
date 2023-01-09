@@ -1,0 +1,61 @@
+/*******************************************************************************
+ * input
+ *
+ *  Text input field with validation error states.
+ *
+ ******************************************************************************/
+.input {
+  @extend %input-text-properties;
+  width: 100%;
+
+  border: 1px solid;
+  border-color: var(--theme-input-border);
+
+  padding-inline: 1rem;
+  padding-block: pxToRem(12px);
+  border-radius: 0.25rem;
+
+  color: var(--theme-input-clr);
+}
+.input::placeholder {
+  color: var(--theme-input-placeholder);
+}
+
+.input__label {
+  @extend %input-label-text-properties;
+  position: absolute;
+  margin-top: -1.2rem;
+}
+
+.input__group {
+  position: relative;
+  justify-self: stretch;
+  margin-top: 2.2rem;
+}
+
+.input:focus,
+.input:hover {
+  border-color: var(--theme-input-focus);
+  outline-color: var(--theme-input-focus);
+}
+
+.input--error {
+  border-color: var(--theme-input-error);
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include media-breakpoint("tablet") {
+  .input {
+    padding-block: 1rem;
+    border-radius: 0.5rem;
+  }
+  .input__label {
+    margin-top: -1.5rem;
+  }
+
+  .input__group {
+    margin-top: 3rem;
+  }
+}

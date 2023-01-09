@@ -26,6 +26,16 @@
   --theme-btn-secondary-clr: #{$clr-primary-100};
   --theme-btn-secondary-hover: #{$clr-primary-700};
 
+  //
+  // .input, .input--error
+  //
+  --theme-input-border: #{$clr-neutral-300};
+  --theme-input-focus: #{$clr-accent-purple};
+  --theme-input-error: #{$clr-accent-red};
+  --theme-input-clr: #{$clr-primary-800};
+  --theme-input-label-clr: #{$clr-primary-800};
+  --theme-input-placeholder: #{$clr-neutral-400};
+
   //--theme-slider-bg: #{$clr-primary-800};
   --theme-slider-thumb: #{$clr-neutral-100};
   --theme-slider-focus: #{$clr-accent-orange};

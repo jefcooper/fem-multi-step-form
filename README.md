@@ -46,9 +46,9 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 ### What I learned
 
-- There are a couple of main camps, one is using DOM manipulation to attach template fragments to a div.  The other is one wide form where pages get scrolled into view like a carousel.
+- There are a couple of main camps, one is using DOM manipulation to attach template fragments to a div. The other is one wide form where pages get scrolled into view like a carousel.
 - The carousel approach has some drawbacks in that page visibility needs to be carefully managed.
-- Fromm the W3 Schools page, it appears the carousel approach requires managing the display property on tabs and display: none on tabs that are off screen.  This doesn't affect form state and no data is lost when submitting the form.  Data from hidden tabs is still sent.
+- Fromm the W3 Schools page, it appears the carousel approach requires managing the display property on tabs and display: none on tabs that are off screen. This doesn't affect form state and no data is lost when submitting the form. Data from hidden tabs is still sent.
 - The W3 approach lacks the ability to show a side-scrolling animation, however, this can be fixed up by watching for the animationend event and setting display: none once the animated scroll out of view is completed.
 
 ### Outline of Chosen Approach
@@ -59,9 +59,13 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 4. Use javascript in all cases to manage the state of Next/Previous/Submit buttons along with setting the step indicator on the aside.
 5. Use data- attributes to get as much wired up generically as possible.
 6. Handle an arbitrary number of pages and determine at runtime in js.
-7. For desktop, do not use side scrolling to swap tabs as it is too much movement.  Instead fade from one to the next.  This should be achievable by setting different transitions based on breakpoint.
+7. For desktop, do not use side scrolling to swap tabs as it is too much movement. Instead fade from one to the next. This should be achievable by setting different transitions based on breakpoint.
 
 ### Bugs and Finishing Steps
+
+### Design Alterations
+
+- the original design specifies cursor: pointer when hovering on text input. This overrides the system i-beam cursor that is required for exact placement of cursor when editing... so I did not follow the design for this.
 
 ### Useful resources
 
