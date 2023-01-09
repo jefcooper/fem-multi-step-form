@@ -12,8 +12,42 @@
 
   --theme-accent-red: #{$clr-accent-red};
 
-  --theme-btn-primary-bg: #{$clr-primary-800};
+  //
+  // .btn, .btn--primary, .btn--secondary
+  //
+  --theme-btn-bg: transparent;
+  --theme-btn-clr: #{$clr-neutral-400};
+  --theme-btn-focus: #{$clr-accent-orange};
+  --theme-btn-hover: #{$clr-primary-800};
   --theme-btn-primary-clr: #{$clr-primary-100};
+  --theme-btn-primary-bg: #{$clr-accent-purple};
+  --theme-btn-primary-hover: #{$clr-accent-light-purple};
+  --theme-btn-secondary-bg: #{$clr-primary-800};
+  --theme-btn-secondary-clr: #{$clr-primary-100};
+  --theme-btn-secondary-hover: #{$clr-primary-700};
+
+  //--theme-slider-bg: #{$clr-primary-800};
+  --theme-slider-thumb: #{$clr-neutral-100};
+  --theme-slider-focus: #{$clr-accent-orange};
+  --theme-slider-hover: linear-gradient(
+    135deg,
+    #{$clr-primary-800},
+    #{$clr-primary-800}
+  );
+
+  //--theme-signup-bg: linear-gradient(#{$clr-neutral-100}, #{$clr-primary-800});
+  --theme-slider-bg: linear-gradient(
+    135deg,
+    #{$clr-primary-800},
+    #{$clr-primary-800}
+  );
+
+  --theme-signup-bg: #{$clr-neutral-100};
+
+  --theme-wizard-step-clr: #{$clr-primary-100};
+  --theme-wizard-step-label: #{$clr-primary-400};
+  --theme-wizard-step-active: #{$clr-primary-800};
+  --theme-wizard-step-active-bg: #{$clr-primary-300};
 }
 
 .theme--light {

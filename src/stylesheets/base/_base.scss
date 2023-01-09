@@ -9,12 +9,18 @@
  * body
  */
 body {
+  display: grid;
+  align-content: flex-start;
+
   font-family: $ff-base;
   font-weight: $fw-regular;
   font-size: 1rem;
   line-height: 1.667;
   color: var(--theme-text-regular);
   background-color: var(--theme-bg);
+  background-image: url("/assets/bg-sidebar-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 /**
@@ -35,4 +41,13 @@ ul {
 .attribution {
   position: absolute;
   bottom: 1rem;
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include media-breakpoint("tablet") {
+  body {
+    background-image: none;
+  }
 }

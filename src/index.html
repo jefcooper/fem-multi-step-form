@@ -14,22 +14,43 @@
   <title>Front-end Mentor Multi-step Form</title>
 </head>
 
-<body class="theme--default">
+<body class="theme--default body">
   <main class="signup-form">
     <aside class="wizard-form__steps">
       <ol class="wizard-form__steps-list" data-wizard-steps>
-        <li class="wizard-form__step">Your info</li>
-        <li class="wizard-form__step">Select plan</li>
-        <li class="wizard-form__step">Add-ons</li>
-        <li class="wizard-form__step">Summary</li>
+        <li class="wizard-form__step">
+          <div class="wizard-form__step-group">
+            <div class="wizard-form__step-count"></div>
+            <div class="wizard-form__step-description">Your info</div>
+          </div>
+        </li>
+        <li class="wizard-form__step">
+          <div class="wizard-form__step-group">
+            <div class="wizard-form__step-count"></div>
+            <div class="wizard-form__step-description">Select plan</div>
+          </div>
+        </li>
+        <li class="wizard-form__step">
+          <div class="wizard-form__step-group">
+            <div class="wizard-form__step-count"></div>
+            <div class="wizard-form__step-description">Add-ons</div>
+          </div>
+        </li>
+        <li class="wizard-form__step">
+          <div class="wizard-form__step-group">
+            <div class="wizard-form__step-count"></div>
+            <div class="wizard-form__step-description">Summary</div>
+          </div>
+        </li>
       </ol>
     </aside>
 
     <form action="#" class="wizard-form" data-wizard-form>
       <section class="wizard-form__tab">
         <!-- Step 1 start -->
-        <h1 class="heading--1">Personal info</h1>
-        <p class="text--1">
+        <h1 class="heading--1 signup-form__title">Personal info</h1>
+
+        <p class="text--1 signup-form__subtitle">
           Please provide your name, email address, and phone number.
         </p>
 
@@ -124,6 +145,8 @@
         </p>
       </section>
       <section class="wizard-form__tab">
+
+        <img class="icon--thank-you" src="/assets/icon-thank-you.svg" alt="checkbox">
         <!-- Step 5 start -->
         <h1 class="heading--1">
           Thank you!
@@ -137,11 +160,15 @@
       </section>
     </form>
 
+    <div class="signup-form__buttons">
+      <button type="button" class="btn wizard-form__btn-previous" data-wizard-form-previous>Go Back</button>
+      <button type="button" class="btn btn--secondary wizard-form__btn-next" data-wizard-form-next>Next Step</button>
+      <button type="button" class="btn btn--primary wizard-form__btn-finished"
+        data-wizard-form-finished>Confirm</button>
+    </div>
+
   </main>
 
-  <button type="button" class="btn wizard-form__btn-previous" data-wizard-form-previous>Previous</button>
-  <button type="button" class="btn wizard-form__btn-next" data-wizard-form-next>Next</button>
-  <button type="button" class="btn wizard-form__btn-finished" data-wizard-form-finished>Finished</button>
 </body>
 
 </html>

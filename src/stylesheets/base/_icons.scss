@@ -23,13 +23,13 @@
 }
 
 /**
- * .icon--down
+ * .icon--thank-you
  *
- *  Down arrow
+ *  Thankyou illustration
  */
-.icon--down {
-  width: 8px;
-  height: 4px;
+.icon--thank-you {
+  width: 56px;
+  height: 56px;
 }
 
 /**
@@ -80,4 +80,19 @@
 .icon--twitter {
   width: 20px;
   height: 17px;
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include media-breakpoint("tablet") {
+  /**
+ * .icon--thank-you
+ *
+ *  Thankyou illustration
+ */
+  .icon--thank-you {
+    width: 80px;
+    height: 80px;
+  }
 }

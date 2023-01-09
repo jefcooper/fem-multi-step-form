@@ -1,0 +1,61 @@
+.signup-form {
+  margin-inline: 1rem;
+  padding-inline: 1.5rem;
+  padding-block: 2rem;
+  border-radius: 15px;
+
+  background-color: var(--theme-signup-bg);
+  box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0951141);
+
+  overflow: hidden;
+
+  margin-top: 100px;
+}
+
+.signup-form__title {
+}
+
+.signup-form__subtitle {
+  margin-top: 0.5rem;
+}
+.signup-form__buttons {
+  position: absolute;
+  display: flex;
+  background-color: var(--theme-signup-bg);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+}
+.wizard-form__btn-next {
+  margin-left: auto;
+}
+.wizard-form__btn-finished {
+  margin-left: auto;
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include media-breakpoint("tablet") {
+  .signup-form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 48px;
+
+    max-width: 940px;
+    margin-inline: auto;
+
+    padding-block: 1rem;
+    padding-inline: 1rem;
+  }
+  .signup-form__buttons {
+    position: relative;
+    padding-block: 0;
+    padding-inline: pxToRem(100px);
+  }
+  .wizard-form__steps {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+  }
+}

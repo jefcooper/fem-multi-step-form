@@ -1,8 +1,24 @@
+/****************************************************************************
+ * .btn, .btn--primary, .btn--secondary
+ *
+ *  Main button classes
+ *
+ *  Usage:
+ *
+ *    class=".btn" for a plain, undecorated button (link style)
+ *    class=".btn .btn--primary" for a primary, CTA style button
+ *    class=".btn .btn--secondary" for an ordinary solid button
+ *
+ ****************************************************************************/
+
+/**
+ * .btn
+ */
 .btn {
   user-select: none;
   cursor: pointer;
-  background-color: var(--theme-btn-primary-bg);
-  color: var(--theme-btn-primary-clr);
+  background-color: var(--theme-btn-bg);
+  color: var(--theme-btn-clr);
   border: 0;
   font-size: pxToRem(18px);
   padding-block: 0.5em;
@@ -10,8 +26,35 @@
   border-radius: 0.5rem;
 }
 .btn:focus {
-  outline: 2px solid red;
+  outline: 2px solid var(--theme-btn-focus);
+}
+.btn:hover {
+  color: var(--theme-btn-hover);
 }
 .btn:disabled {
   background-color: grey;
+}
+
+/**
+ * .btn--primary
+ */
+.btn--primary {
+  color: var(--theme-btn-primary-clr);
+  background-color: var(--theme-btn-primary-bg);
+}
+.btn--primary:hover {
+  color: var(--theme-btn-primary-clr);
+  background-color: var(--theme-btn-primary-hover);
+}
+
+/**
+ * .btn--secondary
+ */
+.btn--secondary {
+  color: var(--theme-btn-secondary-clr);
+  background-color: var(--theme-btn-secondary-bg);
+}
+.btn--secondary:hover {
+  color: var(--theme-btn-secondary-clr);
+  background-color: var(--theme-btn-secondary-hover);
 }

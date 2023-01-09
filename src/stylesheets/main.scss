@@ -18,12 +18,13 @@
 
 // 4. Layout
 @import "layout/layout";
+@import "layout/signup-form";
+@import "layout/wizard-form";
 
 // 5. Components
-@import "components/components";
-@import "components/wizard-form";
-@import "components/toggle-switch";
 @import "components/btn";
+@import "components/components";
+@import "components/toggle-switch";
 
 // 6. Page-specific styles
 @import "pages/index";

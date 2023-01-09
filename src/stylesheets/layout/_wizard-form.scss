@@ -1,0 +1,148 @@
+/*-----------------------------------------------------------------------------
+  .wizard-form__tab
+-----------------------------------------------------------------------------*/
+.wizard-form__tab {
+  display: none;
+  justify-items: center;
+}
+
+.wizard-form__tab--thank-you {
+}
+
+/*-----------------------------------------------------------------------------
+  .wizard-form__steps, .wizard-form__steps-list, .wizard-form__step-description
+-----------------------------------------------------------------------------*/
+
+/**
+ * wizard-form__steps
+ *
+ *  aside, attached to the containing element of the list
+ */
+.wizard-form__steps {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-block: 2rem;
+  height: 172px;
+}
+
+/**
+ * wizard-form__steps-list
+ *
+ *  ol, attached to the ordered-list that has steps within it
+ */
+.wizard-form__steps-list {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+}
+ol.wizard-form__steps-list {
+  counter-reset: wizard-item;
+}
+
+/**
+ * wizard-form__step
+ *
+ *  li, the individual step that is modified
+ */
+.wizard-form__step[aria-current="step"]:before {
+  color: var(--theme-wizard-step-active);
+  border-color: var(--theme-wizard-step-active-bg);
+  background-color: var(--theme-wizard-step-active-bg);
+}
+li.wizard-form__step {
+  position: relative;
+  display: grid;
+  place-items: start;
+  color: var(--theme-wizard-step-clr);
+  counter-increment: wizard-item;
+  width: 33px;
+  height: 33px;
+}
+li.wizard-form__step::before {
+  position: absolute;
+  content: counter(wizard-item);
+  border: 1px solid;
+  width: 33px;
+  height: 33px;
+  display: grid;
+  place-items: center;
+  border-radius: 100vw;
+}
+
+/**
+ * wizard-form__step-description
+ */
+.wizard-form__step-description {
+  display: none;
+}
+
+/*-----------------------------------------------------------------------------
+  .wizard-form__btn
+-----------------------------------------------------------------------------*/
+.wizard-form__btn-previous:disabled {
+  display: none;
+}
+.wizard-form__btn-next {
+}
+.wizard-form__btn-next:disabled {
+  display: none;
+}
+.wizard-form__btn-finished {
+}
+.wizard-form__btn-finished:disabled {
+  display: none;
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include media-breakpoint("tablet") {
+  .wizard-form__tab {
+    padding-inline: pxToRem(100px);
+    padding-top: pxToRem(56px);
+    padding-bottom: 2rem;
+  }
+  .wizard-form__steps {
+    position: relative;
+    padding-block: 2rem;
+    width: 274px;
+    height: 568px;
+    background-image: url("/assets/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+  }
+  .wizard-form__steps-list {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: start;
+    gap: 2rem;
+
+    padding: 0;
+    padding-left: 2rem;
+    padding-top: 2.5rem;
+  }
+  .wizard-form__step-group {
+    margin-top: -3px;
+    margin-left: 50px;
+  }
+  .wizard-form__step-description {
+    display: block;
+    line-height: 1.2;
+    font-weight: $fw-bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .wizard-form__step-count {
+    line-height: 1.2;
+    color: var(--theme-wizard-step-label);
+  }
+  .wizard-form__step-count::after {
+    content: "STEP " counter(wizard-item);
+  }
+  li.wizard-form__step {
+    width: 100%;
+  }
+}
