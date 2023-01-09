@@ -48,63 +48,92 @@
       </section>
       <section class="wizard-form__tab">
         <!-- Step 2 start -->
-        Select your plan
-        You have the option of monthly or yearly billing.
+        <h1 class="heading--1">
+          Select your plan
+        </h1>
+        <p class="text--1">
+          You have the option of monthly or yearly billing.
+        </p>
 
-        Arcade
-        $9/mo
+        <div class="radio-card__group">
+          <div class="radio-card">
+            <input type="radio" name="plan-selection" id="plan-selection__arcade" class="radio-card__input">
+            <label for="plan-selection__arcade">Arcade</label>
+            <p class="text--1">$9/mo</p>
+          </div>
 
-        Advanced
-        $12/mo
+          <div class="radio-card">
+            <input type="radio" name="plan-selection" id="plan-selection__advanced" class="radio-card__input">
+            <label for="plan-selection__advanced">Advanced</label>
+            <p class="text--1">$12/mo</p>
+          </div>
 
-        Pro
-        $15/mo
+          <div class="radio-card">
+            <input type="radio" name="plan-selection" id="plan-selection__pro" class="radio-card__input">
+            <label for="plan-selection__pro">Pro</label>
+            <p class="text--1">$15/mo</p>
+          </div>
+        </div>
 
-        Monthly
-        Yearly
-
-        Go Back
-        Next Step
+        <div class="plan-term-toggle">
+          <label for="plan-term-toggle-switch" class="plan-term-toggle__label">Monthly</label>
+          <label class="toggle-switch">
+            <input type="checkbox" id="plan-term-toggle-switch">
+            <span class="toggle-switch__slider"></span>
+          </label>
+          <label for="plan-term-toggle-switch" class="plan-term-toggle__label">Yearly</label>
+        </div>
       </section>
       <section class="wizard-form__tab">
         <!-- Step 3 start -->
-        Pick add-ons
-        Add-ons help enhance your gaming experience.
+        <h1 class="heading--1">
+          Pick add-ons
+        </h1>
+        <p class="text--1">
+          Add-ons help enhance your gaming experience.
+        </p>
 
+        <input type="checkbox" name="options--games" id="options--games" class="plan-options-checkbox">
         Online service
         Access to multiplayer games
         +$1/mo
 
+        <input type="checkbox" name="options--storage" id="options--storage" class="plan-options-checkbox">
         Larger storage
         Extra 1TB of cloud save
         +$2/mo
 
+        <input type="checkbox" name="options--theme" id="options--theme" class="plan-options-checkbox">
         Customizable Profile
         Custom theme on your profile
         +$2/mo
-
-        Go Back
-        Next Step
       </section>
       <section class="wizard-form__tab">
         <!-- Step 4 start -->
-        Finishing up
-        Double-check everything looks OK before confirming.
+        <h1 class="heading--1">
+          Finishing up
+        </h1>
+        <p class="text--1">
+          Double-check everything looks OK before confirming.
+        </p>
 
         <!-- Dynamically add subscription and add-on selections here -->
 
-        Total (per month/year)
-
-        Go Back
-        Confirm
+        <p class="text--1">
+          Total (per month/year)
+        </p>
       </section>
       <section class="wizard-form__tab">
         <!-- Step 5 start -->
-        Thank you!
+        <h1 class="heading--1">
+          Thank you!
+        </h1>
 
-        Thanks for confirming your subscription! We hope you have fun
-        using our platform. If you ever need support, please feel free
-        to email us at support@loremgaming.com.
+        <p class="text--1">
+          Thanks for confirming your subscription! We hope you have fun
+          using our platform. If you ever need support, please feel free
+          to email us at support@loremgaming.com.
+        </p>
       </section>
     </form>
 

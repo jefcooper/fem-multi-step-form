@@ -1,8 +1,8 @@
 /****************************************************************************
- * form-management.js
+ * wizard-form.js
  *
- *  Manage the paging of the multi-page form using <template> sections and
- *  attaching/detaching in the DOM as needed to display the steps.
+ *  Manage the paging of the multi-page form by setting display on each
+ *  section and also updating the current element in a matching step list.
  *
  ****************************************************************************/
 
@@ -87,25 +87,5 @@ function showFormStep(stepNumber, allSteps) {
         indicator.removeAttribute("aria-current");
       }
     });
-  }
-}
-
-/**
- * tryParseInt
- *
- * A variation on Number.parseInt() that takes a default value
- * in case the format of the number is invalid.
- *
- * @param {string} value
- * @param {Number} defaultValue
- * @returns Number
- */
-function tryParseInt(value, defaultValue) {
-  const parsedValue = Number.parseInt(value, 10);
-
-  if (Number.isNaN(parsedValue)) {
-    return defaultValue || 0;
-  } else {
-    return parsedValue;
   }
 }

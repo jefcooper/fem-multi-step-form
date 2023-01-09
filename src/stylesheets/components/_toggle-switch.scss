@@ -1,0 +1,56 @@
+.toggle-switch {
+  --_toggle-switch__width: 48px;
+  --_toggle-switch__height: 24px;
+  --_toggle-switch__transition: 0.4s;
+  --_toggle-switch__inset: 4px;
+
+  position: relative;
+  display: inline-block;
+  width: var(--_toggle-switch__width);
+  height: var(--_toggle-switch__height);
+}
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.toggle-switch input:focus ~ span {
+  outline: 3px solid;
+  outline-color: var(--theme-slider-focus);
+  background-image: var(--theme-slider-hover);
+}
+
+.toggle-switch__slider {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--_toggle-switch__height);
+
+  background-image: var(--theme-slider-bg);
+  cursor: pointer;
+  transition: var(--_toggle-switch__transition) ease-in-out;
+}
+.toggle-switch__slider:hover {
+  background-image: var(--theme-slider-hover);
+}
+
+.toggle-switch__slider::before {
+  position: absolute;
+  content: "";
+  height: calc(
+    var(--_toggle-switch__height) - var(--_toggle-switch__inset) * 2
+  );
+  width: calc(var(--_toggle-switch__height) - var(--_toggle-switch__inset) * 2);
+  left: var(--_toggle-switch__inset);
+  bottom: var(--_toggle-switch__inset);
+  transition: var(--_toggle-switch__transition) ease-in-out;
+  border-radius: calc(
+    var(--_toggle-switch__height) / 2 - var(--_toggle-switch__inset)
+  );
+  background-color: var(--theme-slider-thumb);
+}
+
+.toggle-switch input:checked + .toggle-switch__slider::before {
+  transform: translateX(
+    calc(var(--_toggle-switch__width) - var(--_toggle-switch__height))
+  );
+}
