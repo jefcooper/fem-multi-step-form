@@ -58,6 +58,11 @@
   --theme-wizard-step-label: #{$clr-primary-400};
   --theme-wizard-step-active: #{$clr-primary-800};
   --theme-wizard-step-active-bg: #{$clr-primary-300};
+
+  --theme-radio-card-border: #{$clr-neutral-300};
+  --theme-radio-card-hover-border: #{$clr-accent-purple};
+  --theme-radio-card-checked-bg: #{$clr-neutral-200};
+  --theme-radio-card-checked-border: #{$clr-accent-purple};
 }
 
 .theme--light {

@@ -9,8 +9,10 @@
  * body
  */
 body {
+  /*
   display: grid;
   align-content: flex-start;
+  */
 
   font-family: $ff-base;
   font-weight: $fw-regular;
@@ -49,7 +51,9 @@ ul {
 @include media-breakpoint("tablet") {
   body {
     background-image: none;
+    /*
     align-content: center;
     place-items: center;
+    */
   }
 }

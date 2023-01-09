@@ -1,0 +1,11 @@
+.plan-term-toggle {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: var(--theme-radio-card-checked-bg);
+  padding-block: pxToRem(14px);
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
