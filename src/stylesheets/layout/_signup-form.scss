@@ -1,3 +1,12 @@
+/******************************************************************************
+* signup-form
+*
+* This is not a form (TO-DO rename this).
+* The outer container within which the wizard-form is contained.  This brings
+* together the step list and button navigation layouts.
+*
+******************************************************************************/
+
 @use "../abstracts";
 
 .signup-form {
