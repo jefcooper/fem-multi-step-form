@@ -82,37 +82,43 @@
           You have the option of monthly or yearly billing.
         </p>
 
-        <fieldset class="radio-card__fieldset">
+        <fieldset class="radio-card__fieldset plan-selection__fieldset" id="plan-selection__fieldset">
           <legend class="visually-hidden">Plan Type</legend>
           <input type="radio" name="plan-selection" id="plan-selection__arcade" class="radio-card__input">
           <label for="plan-selection__arcade" class="radio-card__label">
             <img class="icon--arcade" src="assets/icon-arcade.svg" alt="" aria-hidden="true">
             <span class="text--1">Arcade</span>
-            <span class="text--1">$9/mo</span>
+            <span class="text--1 plan--monthly">$9/mo</span>
+            <span class="text--1 plan--yearly">$90/yr</span>
+            <span class="text--1 plan--yearly">2 months free</span>
           </label>
 
           <input type="radio" name="plan-selection" id="plan-selection__advanced" class="radio-card__input">
           <label for="plan-selection__advanced" class="radio-card__label">
             <img class="icon--advanced" src="assets/icon-advanced.svg" alt="" aria-hidden="true">
             <span class="text--1">Advanced</span>
-            <span class="text--1">$12/mo</span>
+            <span class="text--1 plan--monthly">$12/mo</span>
+            <span class="text--1 plan--yearly">$120/yr</span>
+            <span class="text--1 plan--yearly">2 months free</span>
           </label>
 
           <input type="radio" name="plan-selection" id="plan-selection__pro" class="radio-card__input">
           <label for="plan-selection__pro" class="radio-card__label">
             <img class="icon--pro" src="assets/icon-pro.svg" alt="" aria-hidden="true">
             <span class="text--1">Pro</span>
-            <span class="text--1">$15/mo</span>
+            <span class="text--1 plan--monthly">$15/mo</span>
+            <span class="text--1 plan--yearly">$150/yr</span>
+            <span class="text--1 plan--yearly">2 months free</span>
           </label>
         </fieldset>
 
         <div class="plan-term-toggle">
-          <label for="plan-term-toggle-switch" class="plan-term-toggle__label">Monthly</label>
+          <label for="plan-term-toggle-switch" class="plan-term-toggle__label plan-highlight--monthly">Monthly</label>
           <label class="toggle-switch">
             <input type="checkbox" id="plan-term-toggle-switch">
             <span class="toggle-switch__slider"></span>
           </label>
-          <label for="plan-term-toggle-switch" class="plan-term-toggle__label">Yearly</label>
+          <label for="plan-term-toggle-switch" class="plan-term-toggle__label plan-highlight--yearly">Yearly</label>
         </div>
 
       </section>

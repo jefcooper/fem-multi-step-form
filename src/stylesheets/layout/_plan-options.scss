@@ -19,3 +19,20 @@
 .plan-options__price {
   color: var(--theme-plan-price);
 }
+.plan-selection__fieldset[data-plan-type="monthly"] .plan--yearly {
+  display: none;
+}
+
+.plan-selection__fieldset[data-plan-type="yearly"] .plan--monthly {
+  display: none;
+}
+
+.plan-selection__fieldset[data-plan-type="monthly"] .plan-highlight--yearly {
+  //color: var(--theme-plan-dark);
+  color: red;
+}
+
+.plan-selection__fieldset[data-plan-type="yearly"] .plan-highlight--monthly {
+  //color: var(--theme-plan-light);
+  color: green;
+}
