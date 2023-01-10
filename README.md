@@ -61,6 +61,14 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 6. Handle an arbitrary number of pages and determine at runtime in js.
 7. For desktop, do not use side scrolling to swap tabs as it is too much movement. Instead fade from one to the next. This should be achievable by setting different transitions based on breakpoint.
 
+### Todo
+
+- Toggle switch needs work to highlight monthly / yearly. Need to change around the labels so they all follow the input checkbox. Since the visible slider is a label, this should be possible.
+- Fix up typography, it's gotten away from me!
+- Field validation on Your Info page
+- Finishing Up page, need to generate plan summary text and figure out how this interacts with FormData.
+- Figure out what to do on Confirm, do I really post or not?
+
 ### Bugs and Finishing Steps
 
 ### Design Alterations

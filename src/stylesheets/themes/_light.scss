@@ -63,6 +63,14 @@
   --theme-radio-card-hover-border: #{$clr-accent-purple};
   --theme-radio-card-checked-bg: #{$clr-neutral-200};
   --theme-radio-card-checked-border: #{$clr-accent-purple};
+
+  --theme-checkbox-card-border: #{$clr-neutral-300};
+  --theme-checkbox-card-hover-border: #{$clr-accent-purple};
+  --theme-checkbox-card-checked-bg: #{$clr-neutral-200};
+  --theme-checkbox-card-checked-border: #{$clr-accent-purple};
+
+  --theme-plan-name: #{$clr-primary-800};
+  --theme-plan-price: #{$clr-accent-purple};
 }
 
 .theme--light {

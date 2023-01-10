@@ -1,0 +1,21 @@
+.plan-options__fieldset {
+  display: grid;
+  width: 100%;
+  padding: 0;
+  gap: pxToRem(12px);
+  border: 0;
+  margin-top: pxToRem(22px);
+}
+
+.plan-options__text {
+  margin-top: pxToRem(22px);
+}
+
+.plan-options__name {
+  color: var(--theme-plan-name);
+}
+.plan-options__description {
+}
+.plan-options__price {
+  color: var(--theme-plan-price);
+}

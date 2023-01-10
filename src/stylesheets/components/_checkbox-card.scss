@@ -1,0 +1,65 @@
+/******************************************************************************
+ * checkbox-card
+ *
+ *  Style a native checkbox input and label in card format so that there is a
+ *  box surrounding the options with the checkbox inside.
+ *
+ *  <div class="checkbox-card">
+ *    <input type="checkbox" id="option-1">
+ *    <label for="option-1">
+ *      <p>Option description</p>
+ *    </label>
+ *  </div>
+ *
+ ******************************************************************************/
+
+/**
+ * checkbox-card containing div
+ */
+.checkbox-card {
+  position: relative;
+  width: 100%;
+  height: 62px;
+}
+
+/**
+ * input
+ */
+.checkbox-card input {
+  margin-left: 1rem;
+  transform: scale(1.54);
+}
+
+/**
+ * label - unchecked state
+ */
+.checkbox-card label {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  inset: 0;
+  padding-left: 3rem;
+  border: 1px solid;
+  border-color: var(--theme-checkbox-card-border);
+  border-radius: 0.5rem;
+}
+.checkbox-card > input:focus + label {
+  outline: 1px solid;
+  outline-color: var(--theme-checkbox-card-checked-border);
+}
+
+/**
+ * label - checked state
+ */
+.checkbox-card > input:checked + label {
+  border-color: var(--theme-checkbox-card-checked-border);
+}
+
+.checkbox-card span {
+  display: block;
+}
+.checkbox-card span:last-of-type {
+  grid-column: -2 / -1;
+  grid-row: 1 / -1;
+}

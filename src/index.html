@@ -114,30 +114,65 @@
           </label>
           <label for="plan-term-toggle-switch" class="plan-term-toggle__label">Yearly</label>
         </div>
+
       </section>
+
       <section class="wizard-form__tab">
         <!-- Step 3 start -->
-        <h1 class="heading--1">
+        <h1 class="heading--1 plan-options__title">
           Pick add-ons
         </h1>
-        <p class="text--1">
+        <p class="text--1 plan-options__text">
           Add-ons help enhance your gaming experience.
         </p>
 
-        <input type="checkbox" name="options--games" id="options--games" class="plan-options-checkbox">
-        Online service
-        Access to multiplayer games
-        +$1/mo
+        <fieldset class="plan-options__fieldset">
+          <legend class="visually-hidden">Plan option selections</legend>
+          <div class="checkbox-card">
+            <input type="checkbox" name="options--games" id="options--games" class="plan-options-checkbox">
+            <label for="options--games" class="checkbox-card__label">
+              <span class="plan-options__name">
+                Online service
+              </span>
+              <span class="plan-options__description">
+                Access to multiplayer games
+              </span>
+              <span class="plan-options__price">
+                +$1/mo
+              </span>
+            </label>
+          </div>
 
-        <input type="checkbox" name="options--storage" id="options--storage" class="plan-options-checkbox">
-        Larger storage
-        Extra 1TB of cloud save
-        +$2/mo
+          <div class="checkbox-card">
+            <input type="checkbox" name="options--storage" id="options--storage" class="plan-options-checkbox">
+            <label for="options--storage">
+              <span>
+                Larger storage
+              </span>
+              <span>
+                Extra 1TB of cloud save
+              </span>
+              <span>
+                +$2/mo
+              </span>
+            </label>
+          </div>
 
-        <input type="checkbox" name="options--theme" id="options--theme" class="plan-options-checkbox">
-        Customizable Profile
-        Custom theme on your profile
-        +$2/mo
+          <div class="checkbox-card">
+            <input type="checkbox" name="options--theme" id="options--theme" class="plan-options-checkbox">
+            <label for="options--theme">
+              <span>
+                Customizable Profile
+              </span>
+              <span>
+                Custom theme on your profile
+              </span>
+              <span>
+                +$2/mo
+              </span>
+            </label>
+          </div>
+        </fieldset>
       </section>
       <section class="wizard-form__tab">
         <!-- Step 4 start -->

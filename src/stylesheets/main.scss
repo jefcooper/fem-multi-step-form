@@ -21,6 +21,7 @@
 @import "layout/signup-form";
 @import "layout/wizard-form";
 @import "layout/plan-term-toggle";
+@import "layout/plan-options";
 
 // 5. Components
 @import "components/components";
@@ -28,6 +29,7 @@
 @import "components/input";
 @import "components/toggle-switch";
 @import "components/radio-card";
+@import "components/checkbox-card";
 
 // 6. Page-specific styles
 @import "pages/index";
