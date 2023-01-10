@@ -6,14 +6,16 @@
  *
  *****************************************************************************/
 
+@use "../abstracts";
+
 /**
  * Ubuntu Regular, fixed-weight font
  */
 @font-face {
-  font-family: $font-base;
+  font-family: abstracts.$font-base;
   font-style: normal;
-  font-weight: $fw-regular;
-  src: local($font-base),
+  font-weight: abstracts.$fw-regular;
+  src: local(abstracts.$font-base),
     url("/assets/fonts/Ubuntu-Regular.ttf") format("truetype");
   font-display: swap;
 }
@@ -22,10 +24,10 @@
  * Ubuntu Medium, fixed-weight font
  */
 @font-face {
-  font-family: $font-base;
+  font-family: abstracts.$font-base;
   font-style: normal;
-  font-weight: $fw-medium;
-  src: local($font-base),
+  font-weight: abstracts.$fw-medium;
+  src: local(abstracts.$font-base),
     url("/assets/fonts/Ubuntu-Medium.ttf") format("truetype");
   font-display: swap;
 }
@@ -34,10 +36,10 @@
  * Ubuntu Bold, fixed-weight font
  */
 @font-face {
-  font-family: $font-base;
+  font-family: abstracts.$font-base;
   font-style: normal;
-  font-weight: $fw-bold;
-  src: local($font-base),
+  font-weight: abstracts.$fw-bold;
+  src: local(abstracts.$font-base),
     url("/assets/fonts/Ubuntu-Bold.ttf") format("truetype");
   font-display: swap;
 }

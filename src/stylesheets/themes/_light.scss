@@ -4,75 +4,76 @@
  *****************************************************************************/
 
 @use "sass:color";
+@use "../abstracts";
 
 @mixin theme---light {
-  --theme-text-regular: #{$clr-neutral-400};
-  --theme-text-dark: #{$clr-primary-800};
-  --theme-bg: #{$clr-primary-100};
+  --theme-text-regular: #{abstracts.$clr-neutral-400};
+  --theme-text-dark: #{abstracts.$clr-primary-800};
+  --theme-bg: #{abstracts.$clr-primary-100};
 
-  --theme-accent-red: #{$clr-accent-red};
+  --theme-accent-red: #{abstracts.$clr-accent-red};
 
   //
   // .btn, .btn--primary, .btn--secondary
   //
   --theme-btn-bg: transparent;
-  --theme-btn-clr: #{$clr-neutral-400};
-  --theme-btn-focus: #{$clr-accent-orange};
-  --theme-btn-hover: #{$clr-primary-800};
-  --theme-btn-primary-clr: #{$clr-primary-100};
-  --theme-btn-primary-bg: #{$clr-accent-purple};
-  --theme-btn-primary-hover: #{$clr-accent-light-purple};
-  --theme-btn-secondary-bg: #{$clr-primary-800};
-  --theme-btn-secondary-clr: #{$clr-primary-100};
-  --theme-btn-secondary-hover: #{$clr-primary-700};
+  --theme-btn-clr: #{abstracts.$clr-neutral-400};
+  --theme-btn-focus: #{abstracts.$clr-accent-orange};
+  --theme-btn-hover: #{abstracts.$clr-primary-800};
+  --theme-btn-primary-clr: #{abstracts.$clr-primary-100};
+  --theme-btn-primary-bg: #{abstracts.$clr-accent-purple};
+  --theme-btn-primary-hover: #{abstracts.$clr-accent-light-purple};
+  --theme-btn-secondary-bg: #{abstracts.$clr-primary-800};
+  --theme-btn-secondary-clr: #{abstracts.$clr-primary-100};
+  --theme-btn-secondary-hover: #{abstracts.$clr-primary-700};
 
   //
   // .input, .input--error
   //
-  --theme-input-border: #{$clr-neutral-300};
-  --theme-input-focus: #{$clr-accent-purple};
-  --theme-input-error: #{$clr-accent-red};
-  --theme-input-clr: #{$clr-primary-800};
-  --theme-input-label-clr: #{$clr-primary-800};
-  --theme-input-placeholder: #{$clr-neutral-400};
+  --theme-input-border: #{abstracts.$clr-neutral-300};
+  --theme-input-focus: #{abstracts.$clr-accent-purple};
+  --theme-input-error: #{abstracts.$clr-accent-red};
+  --theme-input-clr: #{abstracts.$clr-primary-800};
+  --theme-input-label-clr: #{abstracts.$clr-primary-800};
+  --theme-input-placeholder: #{abstracts.$clr-neutral-400};
 
   //--theme-slider-bg: #{$clr-primary-800};
-  --theme-slider-thumb: #{$clr-neutral-100};
-  --theme-slider-focus: #{$clr-accent-orange};
+  --theme-slider-thumb: #{abstracts.$clr-neutral-100};
+  --theme-slider-focus: #{abstracts.$clr-accent-orange};
   --theme-slider-hover: linear-gradient(
     135deg,
-    #{$clr-primary-800},
-    #{$clr-primary-800}
+    #{abstracts.$clr-primary-800},
+    #{abstracts.$clr-primary-800}
   );
 
   //--theme-signup-bg: linear-gradient(#{$clr-neutral-100}, #{$clr-primary-800});
   --theme-slider-bg: linear-gradient(
     135deg,
-    #{$clr-primary-800},
-    #{$clr-primary-800}
+    #{abstracts.$clr-primary-800},
+    #{abstracts.$clr-primary-800}
   );
 
-  --theme-signup-bg: #{$clr-neutral-100};
+  --theme-signup-bg: #{abstracts.$clr-neutral-100};
 
-  --theme-wizard-step-clr: #{$clr-primary-100};
-  --theme-wizard-step-label: #{$clr-primary-400};
-  --theme-wizard-step-active: #{$clr-primary-800};
-  --theme-wizard-step-active-bg: #{$clr-primary-300};
+  --theme-wizard-step-clr: #{abstracts.$clr-primary-100};
+  --theme-wizard-step-label: #{abstracts.$clr-primary-400};
+  --theme-wizard-step-active: #{abstracts.$clr-primary-800};
+  --theme-wizard-step-active-bg: #{abstracts.$clr-primary-300};
 
-  --theme-radio-card-border: #{$clr-neutral-300};
-  --theme-radio-card-hover-border: #{$clr-accent-purple};
-  --theme-radio-card-checked-bg: #{$clr-neutral-200};
-  --theme-radio-card-checked-border: #{$clr-accent-purple};
+  --theme-radio-card-border: #{abstracts.$clr-neutral-300};
+  --theme-radio-card-hover-border: #{abstracts.$clr-accent-purple};
+  --theme-radio-card-checked-bg: #{abstracts.$clr-neutral-200};
+  --theme-radio-card-checked-border: #{abstracts.$clr-accent-purple};
 
-  --theme-checkbox-card-border: #{$clr-neutral-300};
-  --theme-checkbox-card-hover-border: #{$clr-accent-purple};
-  --theme-checkbox-card-checked-bg: #{$clr-neutral-200};
-  --theme-checkbox-card-checked-border: #{$clr-accent-purple};
+  --theme-checkbox-card-border: #{abstracts.$clr-neutral-300};
+  --theme-checkbox-card-hover-border: #{abstracts.$clr-accent-purple};
+  --theme-checkbox-card-checked-bg: #{abstracts.$clr-neutral-200};
+  --theme-checkbox-card-checked-border: #{abstracts.$clr-accent-purple};
 
-  --theme-plan-name: #{$clr-primary-800};
-  --theme-plan-price: #{$clr-accent-purple};
-  --theme-plan-dark: #{$clr-primary-800};
-  --theme-plan-light: #{$clr-primary-300};
+  --theme-plan-name: #{abstracts.$clr-primary-800};
+  --theme-plan-price: #{abstracts.$clr-accent-purple};
+  --theme-plan-dark: #{abstracts.$clr-primary-800};
+  --theme-plan-light: #{abstracts.$clr-primary-300};
 }
 
 .theme--light {

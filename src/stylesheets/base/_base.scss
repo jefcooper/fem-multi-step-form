@@ -5,6 +5,8 @@
  *
  *****************************************************************************/
 
+@use "../abstracts";
+
 /**
  * body
  */
@@ -12,8 +14,8 @@ body {
   display: grid;
   align-content: flex-start;
 
-  font-family: $ff-base;
-  font-weight: $fw-regular;
+  font-family: abstracts.$ff-base;
+  font-weight: abstracts.$fw-regular;
   font-size: 1rem;
   line-height: 1.667;
   color: var(--theme-text-regular);
@@ -46,7 +48,7 @@ ul {
 /*----------------------------------------------------------------------------
   Tablet breakpoint
  ----------------------------------------------------------------------------*/
-@include media-breakpoint("tablet") {
+@include abstracts.media-breakpoint("tablet") {
   body {
     background-image: none;
 

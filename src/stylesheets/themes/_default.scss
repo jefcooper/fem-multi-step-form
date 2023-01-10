@@ -16,6 +16,8 @@
  *
  *****************************************************************************/
 
+@use "light";
+
 //@media (prefers-color-scheme: "light") {}
 :root {
   // indicate preference to the browser
@@ -23,5 +25,5 @@
 }
 
 .theme--default {
-  @include theme---light;
+  @include light.theme---light;
 }

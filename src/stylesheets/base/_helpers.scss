@@ -6,11 +6,9 @@
  *****************************************************************************/
 
 @use "sass:math";
+@use "../abstracts";
 
-/**
- * .visually-hidden
- */
-.visually-hidden {
+@mixin visually-hidden-mixin {
   position: absolute;
 
   width: 1px;
@@ -24,14 +22,21 @@
 }
 
 /**
+ * .visually-hidden
+ */
+.visually-hidden {
+  @include visually-hidden-mixin;
+}
+
+/**
  * .container
  *
  *  constrain the maximum width on desktop and add a margin
  *  when within the max-width.
  */
 .container > * {
-  --_container-margin: #{$container-margin}; /* mobile is default */
-  --_container-max-width: #{$container-max-width}; /* desktop max width */
+  --_container-margin: #{abstracts.$container-margin}; /* mobile is default */
+  --_container-max-width: #{abstracts.$container-max-width}; /* desktop max width */
 
   max-width: var(--_container-max-width);
   margin-inline: max(

@@ -5,6 +5,7 @@
  *
  *****************************************************************************/
 @use "sass:map";
+@use "variables";
 
 /**
  * media-breakpoint
@@ -24,7 +25,10 @@
  *
  *  The $breakpoints map is defined for this project in _variables.scss
  */
-@mixin media-breakpoint($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+@mixin media-breakpoint(
+  $mq-breakpoint,
+  $mq-breakpoints: variables.$breakpoints
+) {
   @if map-has-key($mq-breakpoints, $mq-breakpoint) {
     $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
   }

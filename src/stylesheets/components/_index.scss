@@ -1,5 +1,5 @@
-@import "btn";
-@import "input";
-@import "toggle-switch";
-@import "radio-card";
-@import "checkbox-card";
+@forward "btn";
+@forward "input";
+@forward "toggle-switch";
+@forward "radio-card";
+@forward "checkbox-card";

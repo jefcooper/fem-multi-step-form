@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .select-plan__term-toggle {
   display: grid;
   grid-auto-flow: column;
@@ -42,7 +44,7 @@
 /*----------------------------------------------------------------------------
   Tablet breakpoint
  ----------------------------------------------------------------------------*/
-@include media-breakpoint("tablet") {
+@include abstracts.media-breakpoint("tablet") {
   .select-plan__fieldset {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;

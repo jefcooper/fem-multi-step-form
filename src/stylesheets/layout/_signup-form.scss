@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .signup-form {
   margin-inline: 1rem;
   padding-inline: 1.5rem;
@@ -37,7 +39,7 @@
 /*----------------------------------------------------------------------------
   Tablet breakpoint
  ----------------------------------------------------------------------------*/
-@include media-breakpoint("tablet") {
+@include abstracts.media-breakpoint("tablet") {
   .signup-form {
     --_max-width: 940px;
     --_min-margin: 1rem;
@@ -69,7 +71,7 @@
 /*----------------------------------------------------------------------------
   Desktop breakpoint
  ----------------------------------------------------------------------------*/
-@include media-breakpoint("desktop") {
+@include abstracts.media-breakpoint("desktop") {
   .signup-form__buttons {
     padding-inline: pxToRem(100px);
   }

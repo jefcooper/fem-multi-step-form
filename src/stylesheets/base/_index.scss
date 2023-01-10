@@ -1,6 +1,6 @@
-@import "reset";
-@import "base";
-@import "fonts";
-@import "typography";
-@import "icons";
-@import "helpers";
+@forward "reset";
+@forward "base";
+@forward "fonts";
+@forward "typography";
+@forward "icons";
+@forward "helpers";
