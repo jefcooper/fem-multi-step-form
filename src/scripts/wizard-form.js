@@ -34,6 +34,7 @@ btnNext?.addEventListener("click", (evt) => {
   if (currentStep === steps.length - 1) {
     btnNext?.setAttribute("disabled", "");
     btnFinished?.removeAttribute("disabled");
+    btnFinished.focus();
   }
   if (currentStep === 1) {
     btnPrev?.removeAttribute("disabled");
