@@ -58,6 +58,7 @@ btnPrev?.addEventListener("click", (evt) => {
 
 // show initial form step
 showFormStep(currentStep, steps);
+btnNext.focus();
 
 /**
  * getFormSteps
