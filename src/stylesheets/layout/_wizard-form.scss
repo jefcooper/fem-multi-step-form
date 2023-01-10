@@ -102,7 +102,7 @@ li.wizard-form__step::before {
  ----------------------------------------------------------------------------*/
 @include media-breakpoint("tablet") {
   .wizard-form__tab {
-    padding-inline: pxToRem(100px);
+    padding-inline: 3rem;
     padding-top: pxToRem(56px);
     padding-bottom: 2rem;
   }
@@ -144,5 +144,14 @@ li.wizard-form__step::before {
   }
   li.wizard-form__step {
     width: 100%;
+  }
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include media-breakpoint("desktop") {
+  .wizard-form__tab {
+    padding-inline: pxToRem(100px);
   }
 }

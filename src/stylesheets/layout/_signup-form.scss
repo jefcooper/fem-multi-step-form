@@ -39,6 +39,8 @@
  ----------------------------------------------------------------------------*/
 @include media-breakpoint("tablet") {
   .signup-form {
+    --_max-width: 940px;
+    --_min-margin: 1rem;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -46,8 +48,8 @@
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 48px;
 
-    max-width: 940px;
-    margin-inline: auto;
+    max-width: var(--_max-width);
+    margin-inline: max(var(--_min-margin), calc(50vw - var(--_max-width) / 2));
     margin-block: 0;
 
     padding-block: 1rem;
@@ -56,10 +58,19 @@
   .signup-form__buttons {
     position: relative;
     padding-block: 0;
-    padding-inline: pxToRem(100px);
+    padding-inline: 3rem;
   }
   .wizard-form__steps {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
+  }
+}
+
+/*----------------------------------------------------------------------------
+  Desktop breakpoint
+ ----------------------------------------------------------------------------*/
+@include media-breakpoint("desktop") {
+  .signup-form__buttons {
+    padding-inline: pxToRem(100px);
   }
 }
