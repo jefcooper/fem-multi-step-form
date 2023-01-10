@@ -11,7 +11,7 @@
  * Default and mobile typography
  *--------------------------------------------------------------------------*/
 
-@mixin regular-text-properties {
+.regular-text-properties {
   font-family: abstracts.$ff-base;
   font-weight: abstracts.$fw-bold;
   font-size: abstracts.pxToRem(14px);
@@ -19,7 +19,7 @@
   color: var(--theme-text-regular);
 }
 
-@mixin input-text-properties {
+.input-text-properties {
   font-family: abstracts.$ff-base;
   font-weight: abstracts.$fw-medium;
   font-size: abstracts.pxToRem(15px);
@@ -27,7 +27,7 @@
   color: var(--theme-text-regular);
 }
 
-@mixin input-label-text-properties {
+.input-label-text-properties {
   font-family: abstracts.$ff-base;
   font-weight: abstracts.$fw-regular;
   font-size: abstracts.pxToRem(12px);
@@ -51,14 +51,14 @@
   Tablet breakpoint
  ----------------------------------------------------------------------------*/
 @include abstracts.media-breakpoint("tablet") {
-  %input-text-properties {
+  .input-text-properties {
     font-family: abstracts.$ff-base;
     font-weight: abstracts.$fw-medium;
     font-size: abstracts.pxToRem(16px);
     line-height: 1;
     color: var(--theme-text-regular);
   }
-  %input-label-text-properties {
+  .input-label-text-properties {
     font-size: abstracts.pxToRem(14px);
     line-height: abstracts.pxLineHeight(14px, 16px);
   }

@@ -9,14 +9,14 @@
 @use "../base";
 
 .input {
-  @include base.input-text-properties;
+  @extend .input-text-properties;
   width: 100%;
 
   border: 1px solid;
   border-color: var(--theme-input-border);
 
   padding-inline: 1rem;
-  padding-block: pxToRem(12px);
+  padding-block: abstracts.pxToRem(12px);
   border-radius: 0.25rem;
 
   color: var(--theme-input-clr);
@@ -26,7 +26,7 @@
 }
 
 .input__label {
-  @include base.input-label-text-properties;
+  @extend .input-label-text-properties;
   position: absolute;
   margin-top: -1.2rem;
 }
