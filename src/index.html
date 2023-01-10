@@ -58,18 +58,19 @@
           <label for="personal-info__name" class="form--label input__label">
             Name
           </label>
-          <input type="text" id="personal-info__name" class="input personal-info__name" placeholder="e.g. Stephen King">
+          <input type="text" name="personal-name" id="personal-info__name" class="input personal-info__name"
+            placeholder="e.g. Stephen King">
         </div>
 
         <div class="input__group">
           <label for="personal-info__email" class="input__label form--label">Email Address</label>
-          <input type="email" id="personal-info__email" class="input personal-info__email"
+          <input type="email" name="personal-email" id="personal-info__email" class="input personal-info__email"
             placeholder="e.g. stephenking@lorem.com">
         </div>
 
         <div class="input__group">
           <label for="personal-info__phone" class="form--label input__label">Phone Number</label>
-          <input type="tel" id="personal-info__tel" class="input personal-info__tel"
+          <input type="tel" name="personal-tel" id="personal-info__tel" class="input personal-info__tel"
             placeholder="e.g. +1 234 567 890 Next Step">
         </div>
       </section>
@@ -82,43 +83,45 @@
           You have the option of monthly or yearly billing.
         </p>
 
-        <fieldset class="radio-card__fieldset plan-selection__fieldset" id="plan-selection__fieldset">
+        <fieldset class="radio-card__fieldset select-plan__fieldset" id="select-plan__fieldset">
           <legend class="visually-hidden">Plan Type</legend>
-          <input type="radio" name="plan-selection" id="plan-selection__arcade" class="radio-card__input">
-          <label for="plan-selection__arcade" class="radio-card__label">
+          <input type="radio" name="plan" value="arcade" id="select-plan__arcade" class="radio-card__input">
+          <label for="select-plan__arcade" class="radio-card__label">
             <img class="icon--arcade" src="assets/icon-arcade.svg" alt="" aria-hidden="true">
             <span class="text--1">Arcade</span>
-            <span class="text--1 plan--monthly">$9/mo</span>
-            <span class="text--1 plan--yearly">$90/yr</span>
-            <span class="text--1 plan--yearly">2 months free</span>
+            <span class="text--1 select-plan--monthly">$9/mo</span>
+            <span class="text--1 select-plan--yearly">$90/yr</span>
+            <span class="text--1 select-plan--yearly">2 months free</span>
           </label>
 
-          <input type="radio" name="plan-selection" id="plan-selection__advanced" class="radio-card__input">
-          <label for="plan-selection__advanced" class="radio-card__label">
+          <input type="radio" name="plan" value="advanced" id="select-plan__advanced" class="radio-card__input">
+          <label for="select-plan__advanced" class="radio-card__label">
             <img class="icon--advanced" src="assets/icon-advanced.svg" alt="" aria-hidden="true">
             <span class="text--1">Advanced</span>
-            <span class="text--1 plan--monthly">$12/mo</span>
-            <span class="text--1 plan--yearly">$120/yr</span>
-            <span class="text--1 plan--yearly">2 months free</span>
+            <span class="text--1 select-plan--monthly">$12/mo</span>
+            <span class="text--1 select-plan--yearly">$120/yr</span>
+            <span class="text--1 select-plan--yearly">2 months free</span>
           </label>
 
-          <input type="radio" name="plan-selection" id="plan-selection__pro" class="radio-card__input">
-          <label for="plan-selection__pro" class="radio-card__label">
+          <input type="radio" name="plan" value="pro" id="select-plan__pro" class="radio-card__input">
+          <label for="select-plan__pro" class="radio-card__label">
             <img class="icon--pro" src="assets/icon-pro.svg" alt="" aria-hidden="true">
             <span class="text--1">Pro</span>
-            <span class="text--1 plan--monthly">$15/mo</span>
-            <span class="text--1 plan--yearly">$150/yr</span>
-            <span class="text--1 plan--yearly">2 months free</span>
+            <span class="text--1 select-plan--monthly">$15/mo</span>
+            <span class="text--1 select-plan--yearly">$150/yr</span>
+            <span class="text--1 select-plan--yearly">2 months free</span>
           </label>
         </fieldset>
 
-        <div class="plan-term-toggle">
-          <label for="plan-term-toggle-switch" class="plan-term-toggle__label plan-highlight--monthly">Monthly</label>
+        <div class="select-plan__term-toggle" id="select-plan__term-toggle">
+          <label for="select-plan__term-toggle-switch"
+            class="select-plan__term-toggle-label select-plan__highlight--monthly">Monthly</label>
           <label class="toggle-switch">
-            <input type="checkbox" id="plan-term-toggle-switch">
+            <input type="checkbox" id="select-plan__term-toggle-switch" name="plan-yearly">
             <span class="toggle-switch__slider"></span>
           </label>
-          <label for="plan-term-toggle-switch" class="plan-term-toggle__label plan-highlight--yearly">Yearly</label>
+          <label for="select-plan__term-toggle-switch"
+            class="select-plan__term-toggle-label select-plan__highlight--yearly">Yearly</label>
         </div>
 
       </section>
@@ -135,7 +138,7 @@
         <fieldset class="plan-options__fieldset">
           <legend class="visually-hidden">Plan option selections</legend>
           <div class="checkbox-card">
-            <input type="checkbox" name="options--games" id="options--games" class="plan-options-checkbox">
+            <input type="checkbox" name="option-games" id="options--games" class="plan-options-checkbox">
             <label for="options--games" class="checkbox-card__label">
               <span class="plan-options__name">
                 Online service
@@ -150,7 +153,7 @@
           </div>
 
           <div class="checkbox-card">
-            <input type="checkbox" name="options--storage" id="options--storage" class="plan-options-checkbox">
+            <input type="checkbox" name="option-storage" id="options--storage" class="plan-options-checkbox">
             <label for="options--storage">
               <span>
                 Larger storage
@@ -165,7 +168,7 @@
           </div>
 
           <div class="checkbox-card">
-            <input type="checkbox" name="options--theme" id="options--theme" class="plan-options-checkbox">
+            <input type="checkbox" name="option-theme" id="options--theme" class="plan-options-checkbox">
             <label for="options--theme">
               <span>
                 Customizable Profile
@@ -180,7 +183,7 @@
           </div>
         </fieldset>
       </section>
-      <section class="wizard-form__tab">
+      <section class="wizard-form__tab" data-wizard-form-on-show="populateConfirmation">
         <!-- Step 4 start -->
         <h1 class="heading--1">
           Finishing up
@@ -190,6 +193,7 @@
         </p>
 
         <!-- Dynamically add subscription and add-on selections here -->
+        <div class="confirmation" id="confirmation"></div>
 
         <p class="text--1">
           Total (per month/year)

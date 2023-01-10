@@ -72,3 +72,13 @@
 .radio-card__label:hover {
   border-color: var(--theme-radio-card-hover-border);
 }
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include media-breakpoint("tablet") {
+  .radio-card__label {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+}

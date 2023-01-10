@@ -78,6 +78,13 @@ function showFormStep(stepNumber, allSteps) {
   allSteps.forEach((step, idx) => {
     if (idx === stepNumber) {
       step.style.display = "grid";
+      const onShowFn = step.getAttribute("data-wizard-form-on-show");
+
+      if (onShowFn) {
+        // call this named function on the global window context
+        console.log("Call function: " + onShowFn);
+        window[onShowFn]?.();
+      }
     } else {
       step.style.display = "none";
     }
@@ -92,3 +99,8 @@ function showFormStep(stepNumber, allSteps) {
     });
   }
 }
+
+export function wizardFormPopulateConfirmation() {
+  console.log("Wizard Form populate confirmation");
+}
+window.wizardFormPopulateConfirmation = wizardFormPopulateConfirmation;

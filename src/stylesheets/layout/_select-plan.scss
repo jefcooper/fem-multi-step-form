@@ -1,0 +1,50 @@
+.select-plan__term-toggle {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: var(--theme-radio-card-checked-bg);
+  padding-block: pxToRem(14px);
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.select-plan__fieldset[data-plan-type="monthly"] .select-plan--yearly {
+  display: none;
+}
+
+.select-plan__fieldset[data-plan-type="yearly"] .select-plan--monthly {
+  display: none;
+}
+
+.select-plan__fieldset[data-plan-type="monthly"]
+  .select-plan--highlight-yearly {
+  //color: var(--theme-plan-dark);
+  color: red;
+}
+
+.select-plan__fieldset[data-plan-type="yearly"]
+  .select-plan--highlight-monthly {
+  //color: var(--theme-plan-light);
+  color: green;
+}
+
+.select-plan__term-toggle[data-plan-type="monthly"]
+  .select-plan__highlight--monthly {
+  color: var(--theme-plan-dark);
+}
+.select-plan__term-toggle[data-plan-type="yearly"]
+  .select-plan__highlight--yearly {
+  color: var(--theme-plan-dark);
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include media-breakpoint("tablet") {
+  .select-plan__fieldset {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}

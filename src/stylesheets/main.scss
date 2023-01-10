@@ -1,40 +1,9 @@
 @charset "UTF-8";
 
-// 1. Abstract
-@import "abstracts/functions";
-@import "abstracts/variables";
-@import "abstracts/mixins";
-
-// 2. Vendor
-@import "vendor/vendor";
-
-// 3. Base
-@import "base/reset";
-@import "base/base";
-@import "base/fonts";
-@import "base/typography";
-@import "base/icons";
-@import "base/helpers";
-
-// 4. Layout
-@import "layout/layout";
-@import "layout/signup-form";
-@import "layout/wizard-form";
-@import "layout/plan-term-toggle";
-@import "layout/plan-options";
-@import "layout/select-plan";
-
-// 5. Components
-@import "components/components";
-@import "components/btn";
-@import "components/input";
-@import "components/toggle-switch";
-@import "components/radio-card";
-@import "components/checkbox-card";
-
-// 6. Page-specific styles
-@import "pages/index";
-
-// 7. Themes
-@import "themes/light";
-@import "themes/default";
+@import "abstracts";
+@import "vendor";
+@import "base";
+@import "layout";
+@import "components";
+@import "pages";
+@import "themes";
