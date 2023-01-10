@@ -1,15 +1,15 @@
 /******************************************************************************
-* signup-form
+* signup-wizard
 *
-* This is not a form (TO-DO rename this).
-* The outer container within which the wizard-form is contained.  This brings
-* together the step list and button navigation layouts.
+* The outer container which houses the wizard, multi-step workflow elements.
+* This comprises an aside containing the step list, a form with sections for
+* each tab in the workflow, and navigation buttons.
 *
 ******************************************************************************/
 
 @use "../abstracts";
 
-.signup-form {
+.signup-wizard {
   margin-inline: 1rem;
   padding-inline: 1.5rem;
   padding-block: 2rem;
@@ -23,13 +23,13 @@
   margin-top: 100px;
 }
 
-.signup-form__title {
+.signup-wizard__title {
 }
 
-.signup-form__subtitle {
+.signup-wizard__subtitle {
   margin-top: 0.5rem;
 }
-.signup-form__buttons {
+.signup-wizard__buttons {
   position: absolute;
   display: flex;
   background-color: var(--theme-signup-bg);
@@ -49,7 +49,7 @@
   Tablet breakpoint
  ----------------------------------------------------------------------------*/
 @include abstracts.media-breakpoint("tablet") {
-  .signup-form {
+  .signup-wizard {
     --_max-width: 940px;
     --_min-margin: 1rem;
     position: relative;
@@ -66,7 +66,7 @@
     padding-block: 1rem;
     padding-inline: 1rem;
   }
-  .signup-form__buttons {
+  .signup-wizard__buttons {
     position: relative;
     padding-block: 0;
     padding-inline: 3rem;
@@ -81,7 +81,7 @@
   Desktop breakpoint
  ----------------------------------------------------------------------------*/
 @include abstracts.media-breakpoint("desktop") {
-  .signup-form__buttons {
+  .signup-wizard__buttons {
     padding-inline: pxToRem(100px);
   }
 }

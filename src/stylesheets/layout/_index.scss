@@ -1,7 +1,8 @@
-@forward "signup-form";
+@forward "signup-wizard";
 @forward "wizard-form";
-@forward "select-plan";
+@forward "your-info"; // page 1
+@forward "select-plan"; // page 2
 @forward "plan-term-toggle";
-@forward "plan-options";
-@forward "confirmation";
-@forward "thankyou";
+@forward "add-ons"; // page 3
+@forward "summary"; // page 4
+@forward "thankyou"; // page 5

@@ -18,7 +18,7 @@
 </head>
 
 <body class="theme--default body">
-  <main class="signup-form">
+  <main class="signup-wizard">
     <aside class="wizard-form__steps">
       <ol class="wizard-form__steps-list" data-wizard-steps>
         <li class="wizard-form__step">
@@ -49,11 +49,11 @@
     </aside>
 
     <form action="#" id="wizard-form" class="wizard-form" data-wizard-form>
-      <section class="wizard-form__tab">
+      <section class="wizard-form__tab your-info">
         <!-- Step 1 start -->
-        <h1 class="heading--1 signup-form__title">Personal info</h1>
+        <h1 class="heading--1 signup-wizard__title">Personal info</h1>
 
-        <p class="text--1 signup-form__subtitle">
+        <p class="text--1 signup-wizard__subtitle">
           Please provide your name, email address, and phone number.
         </p>
 
@@ -129,34 +129,34 @@
 
       </section>
 
-      <section class="wizard-form__tab plan-options">
+      <section class="wizard-form__tab add-ons">
         <!-- Step 3 start -->
-        <h1 class="heading--1 plan-options__title">
+        <h1 class="heading--1 add-ons__title">
           Pick add-ons
         </h1>
-        <p class="text--1 plan-options__text">
+        <p class="text--1 add-ons__text">
           Add-ons help enhance your gaming experience.
         </p>
 
-        <fieldset class="plan-options__fieldset">
+        <fieldset class="add-ons__fieldset">
           <legend class="visually-hidden">Plan option selections</legend>
           <div class="checkbox-card">
-            <input type="checkbox" name="option-games" id="options--games" class="plan-options-checkbox">
+            <input type="checkbox" name="option-games" id="options--games" class="add-ons-checkbox">
             <label for="options--games" class="checkbox-card__label">
-              <span class="plan-options__name">
+              <span class="add-ons__name">
                 Online service
               </span>
-              <span class="plan-options__description">
+              <span class="add-ons__description">
                 Access to multiplayer games
               </span>
-              <span class="plan-options__price">
+              <span class="add-ons__price">
                 +$1/mo
               </span>
             </label>
           </div>
 
           <div class="checkbox-card">
-            <input type="checkbox" name="option-storage" id="options--storage" class="plan-options-checkbox">
+            <input type="checkbox" name="option-storage" id="options--storage" class="add-ons-checkbox">
             <label for="options--storage">
               <span>
                 Larger storage
@@ -171,7 +171,7 @@
           </div>
 
           <div class="checkbox-card">
-            <input type="checkbox" name="option-theme" id="options--theme" class="plan-options-checkbox">
+            <input type="checkbox" name="option-theme" id="options--theme" class="add-ons-checkbox">
             <label for="options--theme">
               <span>
                 Customizable Profile
@@ -202,6 +202,7 @@
           Total (per month/year)
         </p>
       </section>
+
       <section class="wizard-form__tab thankyou">
 
         <img class="icon--thank-you" src="/assets/icon-thank-you.svg" alt="checkbox">
@@ -218,7 +219,7 @@
       </section>
     </form>
 
-    <div class="signup-form__buttons">
+    <div class="signup-wizard__buttons">
       <button type="button" class="btn wizard-form__btn-previous" data-wizard-form-previous>Go Back</button>
       <button type="button" class="btn btn--secondary wizard-form__btn-next" data-wizard-form-next>Next Step</button>
       <button type="submit" class="btn btn--primary wizard-form__btn-finished" data-wizard-form-finished
