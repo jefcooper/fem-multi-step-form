@@ -40,7 +40,7 @@
 .radio-card__fieldset {
   padding: 0;
   display: grid;
-  gap: pxToRem(12px);
+  gap: abstracts.pxToRem(12px);
 }
 .radio-card__fieldset:focus {
   background-color: yellow;

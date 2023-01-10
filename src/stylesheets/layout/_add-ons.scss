@@ -5,17 +5,19 @@
 *
 ******************************************************************************/
 
+@use "../abstracts";
+
 .add-ons__fieldset {
   display: grid;
   width: 100%;
   padding: 0;
-  gap: pxToRem(12px);
+  gap: abstracts.pxToRem(12px);
   border: 0;
-  margin-top: pxToRem(22px);
+  margin-top: abstracts.pxToRem(22px);
 }
 
 .add-ons__text {
-  margin-top: pxToRem(22px);
+  margin-top: abstracts.pxToRem(22px);
 }
 
 .add-ons__name {

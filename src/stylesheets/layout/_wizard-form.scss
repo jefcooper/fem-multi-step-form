@@ -113,7 +113,7 @@ li.wizard-form__step::before {
 @include abstracts.media-breakpoint("tablet") {
   .wizard-form__tab {
     padding-inline: 3rem;
-    padding-top: pxToRem(56px);
+    padding-top: (56px);
     padding-bottom: 2rem;
   }
   .wizard-form__steps {
@@ -162,6 +162,6 @@ li.wizard-form__step::before {
  ----------------------------------------------------------------------------*/
 @include abstracts.media-breakpoint("desktop") {
   .wizard-form__tab {
-    padding-inline: pxToRem(100px);
+    padding-inline: abstracts.pxToRem(100px);
   }
 }

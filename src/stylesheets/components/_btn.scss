@@ -11,6 +11,8 @@
  *
  ****************************************************************************/
 
+@use "../abstracts";
+
 /**
  * .btn
  */
@@ -20,7 +22,7 @@
   background-color: var(--theme-btn-bg);
   color: var(--theme-btn-clr);
   border: 0;
-  font-size: pxToRem(18px);
+  font-size: abstracts.pxToRem(18px);
   padding-block: 0.5em;
   padding-inline: 1.5em;
   border-radius: 0.5rem;

@@ -82,6 +82,6 @@
  ----------------------------------------------------------------------------*/
 @include abstracts.media-breakpoint("desktop") {
   .signup-wizard__buttons {
-    padding-inline: pxToRem(100px);
+    padding-inline: abstracts.pxToRem(100px);
   }
 }
