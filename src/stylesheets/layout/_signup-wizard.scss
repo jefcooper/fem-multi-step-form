@@ -23,9 +23,6 @@
   margin-top: 100px;
 }
 
-.signup-wizard__title {
-}
-
 .signup-wizard__subtitle {
   margin-top: 0.5rem;
 }
@@ -83,5 +80,8 @@
 @include abstracts.media-breakpoint("desktop") {
   .signup-wizard__buttons {
     padding-inline: abstracts.pxToRem(100px);
+  }
+  .signup-wizard__subtitle {
+    margin-top: 0.6875rem;
   }
 }

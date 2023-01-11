@@ -63,8 +63,9 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 ### Todo
 
-- Toggle switch needs work to highlight monthly / yearly. Need to change around the labels so they all follow the input checkbox. Since the visible slider is a label, this should be possible.
-- Fix up typography, it's gotten away from me!
+- ~~Toggle switch needs work to highlight monthly / yearly. Need to change around the labels so they all follow the input checkbox. Since the visible slider is a label, this should be possible.~~
+- ~~Fix up typography, it's gotten away from me!~~
+- Custom checkbox so that it can have purple color.
 - Field validation on Your Info page
 - Finishing Up page, need to generate plan summary text and figure out how this interacts with FormData.
 - Figure out what to do on Confirm, do I really post or not?

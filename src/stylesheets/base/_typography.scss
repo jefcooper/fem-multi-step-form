@@ -11,32 +11,8 @@
  * Default and mobile typography
  *--------------------------------------------------------------------------*/
 
-.regular-text-properties {
-  font-family: abstracts.$ff-base;
-  font-weight: abstracts.$fw-bold;
-  font-size: abstracts.pxToRem(14px);
-  line-height: abstracts.pxLineHeight(14px, 17px);
-  color: var(--theme-text-regular);
-}
-
-.input-text-properties {
-  font-family: abstracts.$ff-base;
-  font-weight: abstracts.$fw-medium;
-  font-size: abstracts.pxToRem(15px);
-  line-height: abstracts.pxLineHeight(15px, 17px);
-  color: var(--theme-text-regular);
-}
-
-.input-label-text-properties {
-  font-family: abstracts.$ff-base;
-  font-weight: abstracts.$fw-regular;
-  font-size: abstracts.pxToRem(12px);
-  line-height: abstracts.pxLineHeight(12px, 14px);
-  color: var(--theme-input-label-clr);
-}
-
 /**
- * Hero Section Title - Next generation digital banking
+ * Major heading
  */
 .heading--1 {
   font-family: abstracts.$ff-base;
@@ -47,19 +23,155 @@
   color: var(--theme-text-dark);
 }
 
+/**
+ * heading--2
+ *
+ *  Used on the step heading (e.g. SELECT PLAN)
+ */
+.heading--2 {
+  font-family: abstracts.$ff-base;
+  font-weight: abstracts.$fw-bold;
+  font-size: abstracts.pxToRem(14px);
+  line-height: abstracts.pxLineHeight(14px, 16px);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--theme-text-light);
+}
+
+/**
+ * heading--3
+ *
+ *  Used for the step subheading (e.g. STEP 2)
+ */
+.heading--3 {
+  font-family: abstracts.$ff-base;
+  font-weight: abstracts.$fw-regular;
+  font-size: abstracts.pxToRem(12px);
+  line-height: abstracts.pxLineHeight(12px, 14px);
+  text-align: left;
+  color: var(--theme-text-medium);
+}
+
+.heading--4 {
+  font-family: abstracts.$ff-base;
+  font-weight: abstracts.$fw-medium;
+  font-size: abstracts.pxToRem(16px);
+  line-height: abstracts.pxLineHeight(16px, 18px);
+  text-align: left;
+  color: var(--theme-text-dark);
+}
+
+.heading--5 {
+  font-family: abstracts.$ff-base;
+  font-weight: abstracts.$fw-medium;
+  font-size: abstracts.pxToRem(14px);
+  line-height: abstracts.pxLineHeight(14px, 16px);
+  text-align: left;
+  color: var(--theme-text-dark);
+}
+
+/**
+ * Body Text
+ */
+.text--1 {
+  font-family: abstracts.$ff-base;
+  font-weight: abstracts.$fw-regular;
+  font-size: 1rem;
+  line-height: abstracts.pxLineHeight(16px, 25px);
+  text-align: left;
+  color: var(--theme-text-regular);
+}
+.text--2 {
+  font-family: abstracts.$ff-base;
+  font-weight: abstracts.$fw-regular;
+  font-size: abstracts.pxToRem(14px);
+  line-height: abstracts.pxLineHeight(14px, 20px);
+  text-align: left;
+  color: var(--theme-text-regular);
+}
+.text--3 {
+  font-family: abstracts.$ff-base;
+  font-weight: abstracts.$fw-regular;
+  font-size: abstracts.pxToRem(12px);
+  line-height: abstracts.pxLineHeight(12px, 20px);
+  text-align: left;
+  color: var(--theme-text-dark);
+}
+.text--4 {
+  font-family: abstracts.$ff-base;
+  font-weight: abstracts.$fw-regular;
+  font-size: abstracts.pxToRem(12px);
+  line-height: abstracts.pxLineHeight(12px, 20px);
+  text-align: left;
+  color: var(--theme-text-medium);
+}
+
+/**
+ * input-text - used on text input component
+ */
+.input-text {
+  font-family: abstracts.$ff-base;
+  font-weight: abstracts.$fw-medium;
+  font-size: abstracts.pxToRem(15px);
+  line-height: abstracts.pxLineHeight(15px, 17px);
+  color: var(--theme-input-clr);
+}
+
+/**
+ * input-label-text - used for label associated with input component
+ */
+.input-label-text {
+  font-family: abstracts.$ff-base;
+  font-weight: abstracts.$fw-regular;
+  font-size: abstracts.pxToRem(12px);
+  line-height: abstracts.pxLineHeight(12px, 14px);
+  color: var(--theme-input-label-clr);
+}
+
+/**
+ * btn-text
+ */
+.btn-text {
+  font-family: abstracts.$ff-base;
+  font-weight: abstracts.$fw-medium;
+  font-size: abstracts.pxToRem(14px);
+  line-height: 1;
+  color: var(--theme-btn-clr);
+}
+
+.regular-text-properties {
+  font-family: abstracts.$ff-base;
+  font-weight: abstracts.$fw-bold;
+  font-size: abstracts.pxToRem(14px);
+  line-height: abstracts.pxLineHeight(14px, 17px);
+  color: var(--theme-text-regular);
+}
+
 /*----------------------------------------------------------------------------
   Tablet breakpoint
  ----------------------------------------------------------------------------*/
 @include abstracts.media-breakpoint("tablet") {
-  .input-text-properties {
-    font-family: abstracts.$ff-base;
-    font-weight: abstracts.$fw-medium;
+  .input-text {
     font-size: abstracts.pxToRem(16px);
     line-height: 1;
-    color: var(--theme-text-regular);
   }
-  .input-label-text-properties {
+  .input-label-text {
     font-size: abstracts.pxToRem(14px);
     line-height: abstracts.pxLineHeight(14px, 16px);
+  }
+  .heading--2 {
+    // intentionally left blank
+  }
+  .btn-text {
+    font-size: abstracts.pxToRem(16px);
+  }
+  .heading--5 {
+    font-size: abstracts.pxToRem(16px);
+    line-height: abstracts.pxLineHeight(16px, 18px);
+  }
+  .text--4 {
+    font-size: abstracts.pxToRem(14px);
+    line-height: abstracts.pxLineHeight(14px, 20px);
   }
 }

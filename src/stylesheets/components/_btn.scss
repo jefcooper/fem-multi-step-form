@@ -12,20 +12,21 @@
  ****************************************************************************/
 
 @use "../abstracts";
+@use "../base/typography";
 
 /**
  * .btn
  */
 .btn {
+  @extend .btn-text;
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+  border-radius: 0.25rem;
+  border: 0;
+
+  background-color: var(--theme-btn-bg);
   user-select: none;
   cursor: pointer;
-  background-color: var(--theme-btn-bg);
-  color: var(--theme-btn-clr);
-  border: 0;
-  font-size: abstracts.pxToRem(18px);
-  padding-block: 0.5em;
-  padding-inline: 1.5em;
-  border-radius: 0.5rem;
 }
 .btn:focus {
   outline: 2px solid var(--theme-btn-focus);
@@ -59,4 +60,15 @@
 .btn--secondary:hover {
   color: var(--theme-btn-secondary-clr);
   background-color: var(--theme-btn-secondary-hover);
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include abstracts.media-breakpoint("tablet") {
+  .btn {
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    border-radius: 0.5rem;
+  }
 }

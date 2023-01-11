@@ -19,6 +19,21 @@
   width: 100%;
 }
 
+.select-plan__fieldset {
+  display: grid;
+  margin-top: 1.375rem;
+  gap: 0.75rem;
+  padding: 0;
+}
+
+.select-plan__label {
+  padding-block: 1rem;
+  padding-inline: 1rem;
+}
+
+.select-plan__caption {
+}
+
 .select-plan__fieldset[data-plan-type="monthly"] .select-plan--yearly {
   display: none;
 }
@@ -53,7 +68,24 @@
  ----------------------------------------------------------------------------*/
 @include abstracts.media-breakpoint("tablet") {
   .select-plan__fieldset {
+    display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
+    gap: 1.125rem;
+
+    margin-top: 2.5rem;
+  }
+  .select-plan__label {
+    padding-block: 1.25rem;
+    padding-inline: 1rem;
+  }
+  .select-plan__caption {
+    margin-top: abstracts.pxToRem(40px);
+  }
+  .select-plan__label .text--2 {
+    margin-top: 0.5rem;
+  }
+  .select-plan__label .text--3 {
+    margin-top: 0.3rem;
   }
 }

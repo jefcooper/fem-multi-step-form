@@ -79,40 +79,40 @@
       </section>
       <section class="wizard-form__tab select-plan">
         <!-- Step 2 start -->
-        <h1 class="heading--1">
+        <h1 class="heading--1 signup-wizard__title">
           Select your plan
         </h1>
-        <p class="text--1">
+        <p class="text--1 signup-wizard__subtitle">
           You have the option of monthly or yearly billing.
         </p>
 
         <fieldset class="radio-card__fieldset select-plan__fieldset" id="select-plan__fieldset">
           <legend class="visually-hidden">Plan Type</legend>
           <input type="radio" name="plan" value="arcade" id="select-plan__arcade" class="radio-card__input">
-          <label for="select-plan__arcade" class="radio-card__label">
+          <label for="select-plan__arcade" class="radio-card__label select-plan__label">
             <img class="icon--arcade" src="assets/icon-arcade.svg" alt="" aria-hidden="true">
-            <span class="text--1">Arcade</span>
-            <span class="text--1 select-plan--monthly">$9/mo</span>
-            <span class="text--1 select-plan--yearly">$90/yr</span>
-            <span class="text--1 select-plan--yearly">2 months free</span>
+            <span class="heading--4 select-plan__caption">Arcade</span>
+            <span class="text--2 select-plan--monthly">$9/mo</span>
+            <span class="text--2 select-plan--yearly">$90/yr</span>
+            <span class="text--3 select-plan--yearly">2 months free</span>
           </label>
 
           <input type="radio" name="plan" value="advanced" id="select-plan__advanced" class="radio-card__input">
-          <label for="select-plan__advanced" class="radio-card__label">
+          <label for="select-plan__advanced" class="radio-card__label select-plan__label">
             <img class="icon--advanced" src="assets/icon-advanced.svg" alt="" aria-hidden="true">
-            <span class="text--1">Advanced</span>
-            <span class="text--1 select-plan--monthly">$12/mo</span>
-            <span class="text--1 select-plan--yearly">$120/yr</span>
-            <span class="text--1 select-plan--yearly">2 months free</span>
+            <span class="heading--4 select-plan__caption">Advanced</span>
+            <span class="text--2 select-plan--monthly">$12/mo</span>
+            <span class="text--2 select-plan--yearly">$120/yr</span>
+            <span class="text--3 select-plan--yearly">2 months free</span>
           </label>
 
           <input type="radio" name="plan" value="pro" id="select-plan__pro" class="radio-card__input">
-          <label for="select-plan__pro" class="radio-card__label">
+          <label for="select-plan__pro" class="radio-card__label select-plan__label">
             <img class="icon--pro" src="assets/icon-pro.svg" alt="" aria-hidden="true">
-            <span class="text--1">Pro</span>
-            <span class="text--1 select-plan--monthly">$15/mo</span>
-            <span class="text--1 select-plan--yearly">$150/yr</span>
-            <span class="text--1 select-plan--yearly">2 months free</span>
+            <span class="heading--4 select-plan__caption">Pro</span>
+            <span class="text--2 select-plan--monthly">$15/mo</span>
+            <span class="text--2 select-plan--yearly">$150/yr</span>
+            <span class="text--3 select-plan--yearly">2 months free</span>
           </label>
         </fieldset>
 
@@ -131,10 +131,10 @@
 
       <section class="wizard-form__tab add-ons">
         <!-- Step 3 start -->
-        <h1 class="heading--1 add-ons__title">
+        <h1 class="heading--1 signup-wizard__title">
           Pick add-ons
         </h1>
-        <p class="text--1 add-ons__text">
+        <p class="text--1 signup-wizard__subtitle">
           Add-ons help enhance your gaming experience.
         </p>
 
@@ -143,13 +143,13 @@
           <div class="checkbox-card">
             <input type="checkbox" name="option-games" id="options--games" class="add-ons-checkbox">
             <label for="options--games" class="checkbox-card__label">
-              <span class="add-ons__name">
+              <span class="heading--5 add-ons__name">
                 Online service
               </span>
-              <span class="add-ons__description">
+              <span class="text--4 add-ons__description">
                 Access to multiplayer games
               </span>
-              <span class="add-ons__price">
+              <span class="text--4 add-ons__price">
                 +$1/mo
               </span>
             </label>
@@ -157,14 +157,14 @@
 
           <div class="checkbox-card">
             <input type="checkbox" name="option-storage" id="options--storage" class="add-ons-checkbox">
-            <label for="options--storage">
-              <span>
+            <label for="options--storage" class="checkbox-card__label">
+              <span class="heading--5 add-ons__name">
                 Larger storage
               </span>
-              <span>
+              <span class="text--4 add-ons__description">
                 Extra 1TB of cloud save
               </span>
-              <span>
+              <span class="text--4 add-ons__price">
                 +$2/mo
               </span>
             </label>
@@ -172,14 +172,14 @@
 
           <div class="checkbox-card">
             <input type="checkbox" name="option-theme" id="options--theme" class="add-ons-checkbox">
-            <label for="options--theme">
-              <span>
+            <label for="options--theme" class="checkbox-card__label">
+              <span class="heading--5 add-ons__name">
                 Customizable Profile
               </span>
-              <span>
+              <span class="text--4 add-ons__description">
                 Custom theme on your profile
               </span>
-              <span>
+              <span class="text--4 add-ons__price">
                 +$2/mo
               </span>
             </label>
@@ -188,10 +188,10 @@
       </section>
       <section class="wizard-form__tab confirmation" data-wizard-form-on-show="populateConfirmation">
         <!-- Step 4 start -->
-        <h1 class="heading--1">
+        <h1 class="heading--1 signup-wizard__title">
           Finishing up
         </h1>
-        <p class="text--1">
+        <p class="text--1 signup-wizard__subtitle">
           Double-check everything looks OK before confirming.
         </p>
 

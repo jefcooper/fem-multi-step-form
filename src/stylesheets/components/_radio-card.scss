@@ -38,12 +38,8 @@
   @include base.visually-hidden-mixin;
 }
 .radio-card__fieldset {
-  padding: 0;
-  display: grid;
-  gap: abstracts.pxToRem(12px);
 }
 .radio-card__fieldset:focus {
-  background-color: yellow;
 }
 .radio-card__input:focus + .radio-card__label {
   outline: 1px solid;
@@ -60,8 +56,6 @@
   grid-template-rows: auto auto auto;
   align-items: center;
   column-gap: 1rem;
-  padding-inline: 1rem;
-  padding-block: 0.75rem;
   border: 1px solid;
   border-color: var(--theme-radio-card-border);
   border-radius: 0.5rem;

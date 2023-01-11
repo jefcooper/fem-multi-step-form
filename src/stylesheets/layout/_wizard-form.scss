@@ -7,6 +7,7 @@
 ******************************************************************************/
 
 @use "../abstracts";
+@use "../base";
 
 /*-----------------------------------------------------------------------------
   .wizard-form__tab
@@ -66,13 +67,14 @@ ol.wizard-form__steps-list {
 li.wizard-form__step {
   position: relative;
   display: grid;
-  place-items: start;
+  justify-items: start;
   color: var(--theme-wizard-step-clr);
   counter-increment: wizard-item;
   width: 33px;
   height: 33px;
 }
 li.wizard-form__step::before {
+  @extend .heading--2;
   position: absolute;
   content: counter(wizard-item);
   border: 1px solid;
@@ -87,7 +89,11 @@ li.wizard-form__step::before {
  * wizard-form__step-description
  */
 .wizard-form__step-description {
+  @extend .heading--2;
   display: none;
+}
+.wizard-form__step-count {
+  @extend .heading--3;
 }
 
 /*-----------------------------------------------------------------------------
@@ -135,19 +141,14 @@ li.wizard-form__step::before {
     padding-top: 2.5rem;
   }
   .wizard-form__step-group {
-    margin-top: -3px;
+    display: grid;
+    margin-top: 0;
     margin-left: 50px;
   }
   .wizard-form__step-description {
     display: block;
-    line-height: 1.2;
-    font-weight: abstracts.$fw-bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
   }
   .wizard-form__step-count {
-    line-height: 1.2;
-    color: var(--theme-wizard-step-label);
   }
   .wizard-form__step-count::after {
     content: "STEP " counter(wizard-item);

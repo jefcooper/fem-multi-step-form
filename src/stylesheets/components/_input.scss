@@ -9,7 +9,7 @@
 @use "../base";
 
 .input {
-  @extend .input-text-properties;
+  @extend .input-text;
   width: 100%;
 
   border: 1px solid;
@@ -18,15 +18,13 @@
   padding-inline: 1rem;
   padding-block: abstracts.pxToRem(12px);
   border-radius: 0.25rem;
-
-  color: var(--theme-input-clr);
 }
 .input::placeholder {
   color: var(--theme-input-placeholder);
 }
 
 .input__label {
-  @extend .input-label-text-properties;
+  @extend .input-label-text;
   position: absolute;
   margin-top: -1.2rem;
 }

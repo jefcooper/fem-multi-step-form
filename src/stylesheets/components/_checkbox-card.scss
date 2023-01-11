@@ -18,6 +18,8 @@
  */
 .checkbox-card {
   position: relative;
+  display: grid;
+  justify-content: start;
   width: 100%;
   height: 62px;
 }
@@ -26,8 +28,9 @@
  * input
  */
 .checkbox-card input {
-  margin-left: 1rem;
+  margin-left: 1.5rem;
   transform: scale(1.54);
+  z-index: 2;
 }
 
 /**
@@ -38,8 +41,11 @@
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto auto;
+  row-gap: 0.1875rem;
   inset: 0;
-  padding-left: 3rem;
+  padding-left: 4rem;
+  padding-right: 1rem;
+  padding-block: 0.75rem;
   border: 1px solid;
   border-color: var(--theme-checkbox-card-border);
   border-radius: 0.5rem;
@@ -54,6 +60,7 @@
  */
 .checkbox-card > input:checked + label {
   border-color: var(--theme-checkbox-card-checked-border);
+  background-color: var(--theme-checkbox-card-checked-bg);
 }
 
 .checkbox-card span {
