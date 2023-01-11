@@ -68,9 +68,11 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 - Custom checkbox so that it can have purple color.
 - Field validation on Your Info page
 - Finishing Up page, need to generate plan summary text and figure out how this interacts with FormData.
-- Figure out what to do on Confirm, do I really post or not?
+- ~~Figure out what to do on Confirm, do I really post or not?~~Fixed, no buttons shown on Thank You, confirm on second last page. Posting left as an exercise, but can be done programmatically on click.
 
 ### Bugs and Finishing Steps
+
+- focus on checkbox is now showing, need to hide that because we're showing custom focus on label instead.
 
 ### Design Alterations
 

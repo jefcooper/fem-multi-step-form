@@ -30,11 +30,16 @@ btnNext?.addEventListener("click", (evt) => {
     currentStep += 1;
     showFormStep(currentStep, steps);
   }
+  if (currentStep === steps.length - 2) {
+    btnNext?.setAttribute("disabled", "");
+    btnFinished?.removeAttribute("disabled");
+    btnFinished?.focus();
+  }
   // if we're at end, then set the button to disabled
   if (currentStep === steps.length - 1) {
     btnNext?.setAttribute("disabled", "");
-    btnFinished?.removeAttribute("disabled");
-    btnFinished.focus();
+    btnFinished?.setAttribute("disabled", "");
+    btnPrev?.setAttribute("disabled", "");
   }
   if (currentStep === 1) {
     btnPrev?.removeAttribute("disabled");
@@ -51,8 +56,21 @@ btnPrev?.addEventListener("click", (evt) => {
     btnNext.focus();
   }
   if (currentStep === steps.length - 2) {
-    btnNext?.removeAttribute("disabled");
+    btnNext?.setAttribute("disabled", "");
+    btnFinished?.removeAttribute("disabled");
+  }
+  if (currentStep === steps.length - 3) {
     btnFinished?.setAttribute("disabled", "");
+    btnNext?.removeAttribute("disabled");
+  }
+});
+btnFinished?.addEventListener("click", (evt) => {
+  if (currentStep < steps.length - 1) {
+    currentStep += 1;
+    btnNext?.setAttribute("disabled", "");
+    btnPrev?.setAttribute("disabled", "");
+    btnFinished?.setAttribute("disabled", "");
+    showFormStep(currentStep, steps);
   }
 });
 
