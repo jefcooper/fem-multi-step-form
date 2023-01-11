@@ -118,28 +118,30 @@ function createConfirmation(formData) {
   </div>
   */
 
+  let changeBtn;
+
   // clear the summary element of all children
-  summaryPlanEl.innerText = "";
+  Array.from(summaryPlanEl.children).forEach((el) => {
+    if (el.tagName === "P") {
+      summaryPlanEl.removeChild(el);
+    } else if (el.tagName === "BUTTON") {
+      changeBtn = el;
+    }
+  });
 
   const planText = capitalize(plan) + " (" + capitalize(term) + ")";
-  new Element("p")
-    .text(planText)
-    .class("summary__plan")
-    .class("heading--5")
-    .addTo(summaryPlanEl);
 
   new Element("p")
     .text(formatPrice(planPrice, term))
     .class("summary__price")
     .class("heading--6")
-    .addTo(summaryPlanEl);
+    .insertBefore(summaryPlanEl, changeBtn);
 
-  new Element("button")
-    .text("Change")
-    .class("summary__change")
-    .class("btn")
-    .attribute("type", "button")
-    .addTo(summaryPlanEl);
+  new Element("p")
+    .text(planText)
+    .class("summary__plan")
+    .class("heading--5")
+    .insertBefore(summaryPlanEl, changeBtn);
 
   summaryAddOnsEl.innerText = "";
 
@@ -148,11 +150,13 @@ function createConfirmation(formData) {
     new Element("p")
       .text("Online service")
       .class("summary__option")
+      .class("text--2")
       .addTo(summaryAddOnsEl);
 
     new Element("p")
       .text(formatOptionPrice(optionPricing["option-games"][term], term))
       .class("summary__option-price")
+      .class("text--2")
       .addTo(summaryAddOnsEl);
   }
 
@@ -161,11 +165,13 @@ function createConfirmation(formData) {
     new Element("p")
       .text("Larger storage")
       .class("summary__option")
+      .class("text--2")
       .addTo(summaryAddOnsEl);
 
     new Element("p")
       .text(formatOptionPrice(optionPricing["option-storage"][term], term))
       .class("summary__option-price")
+      .class("text--2")
       .addTo(summaryAddOnsEl);
   }
 
@@ -174,11 +180,13 @@ function createConfirmation(formData) {
     new Element("p")
       .text("Customizable profile")
       .class("summary__option")
+      .class("text--2")
       .addTo(summaryAddOnsEl);
 
     new Element("p")
       .text(formatOptionPrice(optionPricing["option-theme"][term], term))
       .class("summary__option-price")
+      .class("text--2")
       .addTo(summaryAddOnsEl);
   }
 
@@ -187,11 +195,13 @@ function createConfirmation(formData) {
   new Element("p")
     .text("Total (per " + term + ")")
     .class("summary__total-plan")
+    .class("text--2")
     .addTo(summaryTotalEl);
 
   new Element("p")
     .text("+" + formatPrice(totalPrice, term))
     .class("summary__total-price")
+    .class("heading--7")
     .addTo(summaryTotalEl);
 }
 
@@ -241,5 +251,8 @@ class Element {
   }
   addTo(parent) {
     parent.appendChild(this.el);
+  }
+  insertBefore(parent, ref) {
+    parent.insertBefore(this.el, ref);
   }
 }

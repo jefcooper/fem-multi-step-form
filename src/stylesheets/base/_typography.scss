@@ -78,6 +78,14 @@
   text-align: left;
   color: var(--theme-text-dark);
 }
+.heading--7 {
+  font-family: abstracts.$ff-base;
+  font-weight: abstracts.$fw-bold;
+  font-size: abstracts.pxToRem(16px);
+  line-height: abstracts.pxLineHeight(16px, 20px);
+  text-align: left;
+  color: var(--theme-text-accent);
+}
 
 /**
  * Body Text

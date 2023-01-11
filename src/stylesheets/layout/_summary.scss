@@ -59,10 +59,13 @@
 .summary__add-ons {
   display: grid;
   grid-template-columns: 1fr auto;
+  margin-top: 0.75rem;
+  gap: 0.75rem;
 }
 .summary__option {
 }
 .summary__option-price {
+  color: var(--theme-text-dark);
 }
 .summary__total {
   display: grid;

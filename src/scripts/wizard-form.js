@@ -14,6 +14,7 @@ const stepIndicatorList = Array.from(
 const btnNext = document.querySelector("[data-wizard-form-next]");
 const btnPrev = document.querySelector("[data-wizard-form-previous]");
 const btnFinished = document.querySelector("[data-wizard-form-finished]");
+const btnChange = document.querySelector("[data-wizard-form-change]");
 
 let currentStep = 0;
 
@@ -72,6 +73,13 @@ btnFinished?.addEventListener("click", (evt) => {
     btnFinished?.setAttribute("disabled", "");
     showFormStep(currentStep, steps);
   }
+});
+btnChange?.addEventListener("click", (evt) => {
+  // go back to page 2
+  currentStep = 1;
+  showFormStep(currentStep, steps);
+  btnFinished?.setAttribute("disabled", "");
+  btnNext?.removeAttribute("disabled");
 });
 
 // show initial form step
