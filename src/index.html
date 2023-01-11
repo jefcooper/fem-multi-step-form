@@ -195,7 +195,7 @@
           </div>
         </fieldset>
       </section>
-      <section class="wizard-form__tab confirmation" data-wizard-form-on-show="populateConfirmation">
+      <section class="wizard-form__tab summary" data-wizard-form-on-show="populateConfirmation">
         <!-- Step 4 start -->
         <h1 class="heading--1 signup-wizard__title">
           Finishing up
@@ -205,11 +205,38 @@
         </p>
 
         <!-- Dynamically add subscription and add-on selections here -->
-        <div class="confirmation" id="confirmation"></div>
+        <div class="summary" id="confirmation"></div>
 
-        <p class="text--1">
-          Total (per month/year)
-        </p>
+        <!--
+*************** grey ******************
+* Arcade (Yearly)              $90/yr
+* Change
+* -----------------------------------
+* Online service              +$10/yr
+* Larger storage              +$20/yr
+***************************************
+
+Total (per year)              $120/yr
+        -->
+        <div class="summary">
+          <div class="summary__detail">
+            <div class="summary__selected-plan" data-summary-plan>
+              <p class="summary__plan heading--5">Arcade (Yearly)</p>
+              <p class="summary__price heading--6">$90/yr</p>
+              <button type="button" class="summary__change btn">Change</button>
+            </div>
+            <div class="summary__add-ons" data-summary-add-ons>
+              <p class="summary__option">Online service</p>
+              <p class="summary__option-price">+10/yr</p>
+              <p class="summary__option">Larger storage</p>
+              <p class="summary__option-price">+20/yr</p>
+            </div>
+          </div>
+          <div class="summary__total" data-summary-total>
+            <p class="summary__total-plan">Total (per year)</p>
+            <p class="summary__total-price">$120/yr</p>
+          </div>
+        </div>
       </section>
 
       <section class="wizard-form__tab thankyou">

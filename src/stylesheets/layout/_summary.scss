@@ -3,4 +3,73 @@
 *
 * This section is page 4, Finishing Up
 *
+        <div class="summary">
+          <div class="summary__detail">
+            <div class="summary__selected-plan">
+              <p class="summary__plan">Arcade (Yearly)</p>
+              <p class="summary__price">$90/yr</p>
+              <button type="button" class="summary__change">Change</button>
+            </div>
+            <div class="summary__add-ons">
+              <div class="summary__add-on">
+                <p class="summary__option">Online service</p>
+                <p class="summary__price">+10/yr</p>
+              </div>
+              <div class="summary__add-on">
+                <p class="summary__option">Larger storage</p>
+                <p class="summary__option-price">+20/yr</p>
+              </div>
+            </div>
+          </div>
+          <div class="summary__total">
+            <p class="summary__total-label">Total (per year)</p>
+            <p class="summary__total-price">$120/yr</p>
+          </div>
+        </div>
 ******************************************************************************/
+
+.summary {
+  display: grid;
+  width: 100%;
+}
+.summary__detail {
+  background-color: var(--theme-summary-detail-bg);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.summary__selected-plan {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-items: start;
+  border-bottom: 1px solid;
+  border-color: var(--theme-summary-hr);
+}
+.summary__plan {
+}
+.summary__price {
+  grid-row: 1 / 3;
+  grid-column: 2 / 3;
+  display: grid;
+  align-content: center;
+}
+.summary__change.btn {
+  padding-inline: 0;
+  text-decoration: underline;
+}
+.summary__add-ons {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.summary__option {
+}
+.summary__option-price {
+}
+.summary__total {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 1rem;
+}
+.summary__total-label {
+}
+.summary__total-price {
+}

@@ -76,6 +76,9 @@
   --theme-plan-price: #{abstracts.$clr-accent-purple};
   --theme-plan-dark: #{abstracts.$clr-primary-800};
   --theme-plan-light: #{abstracts.$clr-primary-300};
+
+  --theme-summary-detail-bg: #{abstracts.$clr-neutral-200};
+  --theme-summary-hr: #{abstracts.$clr-neutral-300};
 }
 
 .theme--light {

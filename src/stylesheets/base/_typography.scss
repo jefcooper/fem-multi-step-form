@@ -70,6 +70,14 @@
   text-align: left;
   color: var(--theme-text-dark);
 }
+.heading--6 {
+  font-family: abstracts.$ff-base;
+  font-weight: abstracts.$fw-bold;
+  font-size: abstracts.pxToRem(14px);
+  line-height: abstracts.pxLineHeight(14px, 20px);
+  text-align: left;
+  color: var(--theme-text-dark);
+}
 
 /**
  * Body Text
