@@ -29,3 +29,10 @@
 .add-ons__price {
   color: var(--theme-plan-price);
 }
+.add-ons__fieldset[data-plan-type="monthly"] .add-ons--yearly {
+  display: none;
+}
+
+.add-ons__fieldset[data-plan-type="yearly"] .add-ons--monthly {
+  display: none;
+}

@@ -5,3 +5,28 @@
 * the completion of the signup process.
 *
 ******************************************************************************/
+
+@use "../abstracts";
+
+.thankyou {
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  padding-block: abstracts.pxToRem(80px);
+  height: 100%;
+}
+.thankyou .text--1 {
+  text-align: center;
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include abstracts.media-breakpoint("tablet") {
+  .thankyou {
+    padding-block: 0;
+  }
+}

@@ -41,6 +41,7 @@
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto auto;
+  grid-auto-flow: column;
   row-gap: 0.1875rem;
   inset: 0;
   padding-left: 4rem;
@@ -49,6 +50,7 @@
   border: 1px solid;
   border-color: var(--theme-checkbox-card-border);
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 .checkbox-card > input:focus + label {
   outline: 1px solid;

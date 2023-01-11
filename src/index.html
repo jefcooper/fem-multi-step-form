@@ -86,7 +86,7 @@
           You have the option of monthly or yearly billing.
         </p>
 
-        <fieldset class="radio-card__fieldset select-plan__fieldset" id="select-plan__fieldset">
+        <fieldset class="radio-card__fieldset select-plan__fieldset" id="select-plan__fieldset" data-plan-type>
           <legend class="visually-hidden">Plan Type</legend>
           <input type="radio" name="plan" value="arcade" id="select-plan__arcade" class="radio-card__input">
           <label for="select-plan__arcade" class="radio-card__label select-plan__label">
@@ -116,7 +116,7 @@
           </label>
         </fieldset>
 
-        <div class="select-plan__term-toggle" id="select-plan__term-toggle">
+        <div class="select-plan__term-toggle" id="select-plan__term-toggle" data-plan-type>
           <label for="select-plan__term-toggle-switch"
             class="select-plan__term-toggle-label select-plan__highlight--monthly">Monthly</label>
           <label class="toggle-switch">
@@ -138,7 +138,7 @@
           Add-ons help enhance your gaming experience.
         </p>
 
-        <fieldset class="add-ons__fieldset">
+        <fieldset class="add-ons__fieldset" data-plan-type>
           <legend class="visually-hidden">Plan option selections</legend>
           <div class="checkbox-card">
             <input type="checkbox" name="option-games" id="options--games" class="add-ons-checkbox">
@@ -149,8 +149,11 @@
               <span class="text--4 add-ons__description">
                 Access to multiplayer games
               </span>
-              <span class="text--4 add-ons__price">
+              <span class="text--4 add-ons__price add-ons--monthly">
                 +$1/mo
+              </span>
+              <span class="text--4 add-ons__price add-ons--yearly">
+                +$10/yr
               </span>
             </label>
           </div>
@@ -164,8 +167,11 @@
               <span class="text--4 add-ons__description">
                 Extra 1TB of cloud save
               </span>
-              <span class="text--4 add-ons__price">
+              <span class="text--4 add-ons__price add-ons--monthly">
                 +$2/mo
+              </span>
+              <span class="text--4 add-ons__price add-ons--yearly">
+                +$20/yr
               </span>
             </label>
           </div>
@@ -179,8 +185,11 @@
               <span class="text--4 add-ons__description">
                 Custom theme on your profile
               </span>
-              <span class="text--4 add-ons__price">
+              <span class="text--4 add-ons__price add-ons--monthly">
                 +$2/mo
+              </span>
+              <span class="text--4 add-ons__price add-ons--yearly">
+                +$20/yr
               </span>
             </label>
           </div>

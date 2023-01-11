@@ -9,12 +9,9 @@ toggleSwitch.addEventListener("click", (evt) => {
 });
 
 function setPlanType() {
-  toggleFieldset?.setAttribute(
-    "data-plan-type",
-    toggleSwitch.checked ? "yearly" : "monthly"
-  );
-  toggleGroup?.setAttribute(
-    "data-plan-type",
-    toggleSwitch.checked ? "yearly" : "monthly"
-  );
+  const planType = toggleSwitch.checked ? "yearly" : "monthly";
+  const elements = Array.from(document.querySelectorAll("[data-plan-type]"));
+  elements.forEach((el) => {
+    el.setAttribute("data-plan-type", planType);
+  });
 }
