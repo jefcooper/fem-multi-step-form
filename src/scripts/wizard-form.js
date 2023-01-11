@@ -28,6 +28,11 @@ if (steps.length > 1) {
 
 btnNext?.addEventListener("click", (evt) => {
   if (currentStep < steps.length - 1) {
+    // check validity before moving on
+    if (!wizardForm.reportValidity()) {
+      return;
+    }
+
     currentStep += 1;
     showFormStep(currentStep, steps);
   }

@@ -53,13 +53,8 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 ### Outline of Chosen Approach
 
-1. Use the carousel layout and use margin-left to scroll pages into view.
-2. Use an animationend event handler to set display: none once the page has scrolled out of view.
-3. I am expecting that setting display: block and setting margin will work since the div was not previously shown and so would be animated on display along with the margin-left.
-4. Use javascript in all cases to manage the state of Next/Previous/Submit buttons along with setting the step indicator on the aside.
-5. Use data- attributes to get as much wired up generically as possible.
-6. Handle an arbitrary number of pages and determine at runtime in js.
-7. For desktop, do not use side scrolling to swap tabs as it is too much movement. Instead fade from one to the next. This should be achievable by setting different transitions based on breakpoint.
+1. Use a multiple tab approach where each tab is a <section> within a form
+2. Use data- attributes to attach script to the form and buttons to manipulate state
 
 ### Todo
 
@@ -67,7 +62,7 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 - ~~Fix up typography, it's gotten away from me!~~
 - Custom checkbox so that it can have purple color.
 - Field validation on Your Info page
-- Finishing Up page, need to generate plan summary text and figure out how this interacts with FormData.
+- ~~Finishing Up page, need to generate plan summary text and figure out how this interacts with FormData.~~
 - ~~Figure out what to do on Confirm, do I really post or not?~~Fixed, no buttons shown on Thank You, confirm on second last page. Posting left as an exercise, but can be done programmatically on click.
 
 ### Bugs and Finishing Steps
