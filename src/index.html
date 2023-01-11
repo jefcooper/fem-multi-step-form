@@ -58,23 +58,28 @@
         </p>
 
         <div class="input__group">
-          <label for="personal-info__name" class="form--label input__label">
+          <label for="your-info__name" class="form--label input__label">
             Name
           </label>
-          <input required type="text" name="personal-name" id="personal-info__name" class="input personal-info__name"
+          <input required type="text" name="personal-name" id="your-info__name" class="input your-info__name"
             placeholder="e.g. Stephen King">
+          <label for="your-info__name" class="input__label your-info__error-label">This field is required</label>
         </div>
 
         <div class="input__group">
-          <label for="personal-info__email" class="input__label form--label">Email Address</label>
-          <input required type="email" name="personal-email" id="personal-info__email"
-            class="input personal-info__email" placeholder="e.g. stephenking@lorem.com">
+          <label for="your-info__email" class="input__label form--label">Email Address</label>
+          <input required type="email" name="personal-email" id="your-info__email" class="input your-info__email"
+            placeholder="e.g. stephenking@lorem.com">
+          <label for="your-info__name" class="input__label your-info__error-label">This must be a valid email
+            address</label>
         </div>
 
         <div class="input__group">
-          <label for="personal-info__phone" class="form--label input__label">Phone Number</label>
-          <input required type="tel" name="personal-tel" id="personal-info__tel" class="input personal-info__tel"
-            placeholder="e.g. +1 234 567 890 Next Step">
+          <label for="your-info__phone" class="form--label input__label">Phone Number</label>
+          <input required type="tel" pattern="\+?[0-9]+([- ][0-9()]+)+" name="personal-tel" id="your-info__tel"
+            class="input your-info__tel" placeholder="e.g. +1 234 567 890">
+          <label for="your-info__name" class="input__label your-info__error-label">This must be a valid
+            telephone</label>
         </div>
       </section>
       <section class="wizard-form__tab select-plan">

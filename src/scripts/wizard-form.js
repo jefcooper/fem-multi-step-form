@@ -30,7 +30,11 @@ btnNext?.addEventListener("click", (evt) => {
   if (currentStep < steps.length - 1) {
     // check validity before moving on
     if (!wizardForm.reportValidity()) {
+      // record failed validation so we can give feedback in form
+      wizardForm.setAttribute("data-failed-validation", "");
       return;
+    } else {
+      wizardForm.removeAttribute("data-failed-validation");
     }
 
     currentStep += 1;

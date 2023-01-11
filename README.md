@@ -50,6 +50,7 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 - The carousel approach has some drawbacks in that page visibility needs to be carefully managed.
 - Fromm the W3 Schools page, it appears the carousel approach requires managing the display property on tabs and display: none on tabs that are off screen. This doesn't affect form state and no data is lost when submitting the form. Data from hidden tabs is still sent.
 - The W3 approach lacks the ability to show a side-scrolling animation, however, this can be fixed up by watching for the animationend event and setting display: none once the animated scroll out of view is completed.
+- Can force native form validation through javascript
 
 ### Outline of Chosen Approach
 
@@ -80,6 +81,7 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 - https://www.w3schools.com/howto/howto_js_form_steps.asp
 - https://www.w3.org/WAI/tutorials/forms/multi-page/
 - https://a11y-guidelines.orange.com/en/articles/using-aria-current-attribute/
+- https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reportValidity
 
 #### Tooling
 

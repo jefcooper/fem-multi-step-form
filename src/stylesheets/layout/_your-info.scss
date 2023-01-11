@@ -4,3 +4,20 @@
 * This section is page 1, Personal Information, step 1 Your Info
 *
 ******************************************************************************/
+
+.wizard-form[data-failed-validation] .input:invalid {
+  outline-color: var(--theme-accent-red);
+  border-color: var(--theme-accent-red);
+}
+
+.your-info__error-label {
+  display: none;
+  position: absolute;
+  color: var(--theme-accent-red);
+  top: 0;
+  right: 0;
+  margin-top: -1.2rem;
+}
+.wizard-form[data-failed-validation] .input:invalid + .your-info__error-label {
+  display: block;
+}
