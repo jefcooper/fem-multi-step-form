@@ -54,7 +54,11 @@
   border-radius: 0.5rem;
   cursor: pointer;
 }
-.checkbox-card > input:focus + label {
+.checkbox-card > input:focus-visible + label {
+  outline: 1px solid;
+  outline-color: var(--theme-checkbox-card-focus-border);
+}
+.checkbox-card > input:checked:focus-visible + label {
   outline: 1px solid;
   outline-color: var(--theme-checkbox-card-checked-border);
 }

@@ -34,7 +34,6 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 ![Mobile Page 1](./screenshots/screenshot-mobile.webp)
 
-
 ### Links
 
 - Solution URL: [Github Repository](https://github.com/jefcooper/fem-multi-step-form)
@@ -55,11 +54,16 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 ### What I learned
 
-- Can force native form validation through javascript using the reportValidity() method on the form DOM element.  This returns true/false, true if valid, false if invalid.  As well, the :invalid is set on the failing form elements and this can in turn be used for styling the failed element.
+- Can force native form validation through javascript using the reportValidity() method on the form DOM element. This returns true/false, true if valid, false if invalid. As well, the :invalid is set on the failing form elements and this can in turn be used for styling the failed element.
 - Native form validation is preferred for accessibility and focusing on the failed input field is automatic.
-- There is a drawback in that the invalid state is by default shown on initial form load for empty required fields.  This has been changed in my implementation by setting a data- element on the form to indicate if the validation passed/failed, but only after the next button is pressed.
+- There is a drawback in that the invalid state is by default shown on initial form load for empty required fields. This has been changed in my implementation by setting a data- element on the form to indicate if the validation passed/failed, but only after the next button is pressed.
 - This challenge had a lot of individual pieces including custom styled components for input, radio, checkbox.
 - The programmatic page navigation had a lot of edge cases, such as needing a dynamic callback when a tab is shown in order to register event handlers... you can't register an event handler on a hidden DOM element.
+
+#### Mobile First
+
+- test on xcode device simulator or real phone
+- for input fields, use 16px (1rem) font or higher. Less will result in auto-zoom behavior which is disorienting. This design specified a 15px font for input which is not significantly different visually, but results in a terrible user experience with auto-zoom.
 
 ### Outline of Chosen Approach
 

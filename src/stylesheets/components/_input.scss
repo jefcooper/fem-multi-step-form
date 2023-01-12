@@ -35,10 +35,10 @@
   margin-top: 2.2rem;
 }
 
-.input:focus,
-.input:hover {
+.input:focus-visible {
   border-color: var(--theme-input-focus);
-  outline-color: var(--theme-input-focus);
+  //outline-color: var(--theme-input-focus);
+  outline: 0;
 }
 
 .input--error {

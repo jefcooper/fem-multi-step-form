@@ -114,8 +114,15 @@ function showFormStep(stepNumber, allSteps) {
       step.style.display = "grid";
       const onShowFn = step.getAttribute("data-wizard-form-on-show");
 
-      // set focus to first autofocus element if present in tab
-      step.querySelector("[autofocus]")?.focus();
+      const checkedAutofocus = step.querySelector(
+        "input[data-autofocus]:checked"
+      );
+      if (checkedAutofocus) {
+        checkedAutofocus.focus();
+      } else {
+        // set focus to first autofocus element if present in tab
+        step.querySelector("[data-autofocus]")?.focus();
+      }
 
       if (onShowFn) {
         // call this named function on the global window context
