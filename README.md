@@ -59,6 +59,7 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 - There is a drawback in that the invalid state is by default shown on initial form load for empty required fields. This has been changed in my implementation by setting a data- element on the form to indicate if the validation passed/failed, but only after the next button is pressed.
 - This challenge had a lot of individual pieces including custom styled components for input, radio, checkbox.
 - The programmatic page navigation had a lot of edge cases, such as needing a dynamic callback when a tab is shown in order to register event handlers... you can't register an event handler on a hidden DOM element.
+- grid difference between safari and chrome. Chrome defaults align-content to center, but safari defaults to align-content: start. Must be explicit and specify align-content to fix alignment issues.
 
 #### Mobile First
 
