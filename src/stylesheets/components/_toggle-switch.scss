@@ -21,7 +21,7 @@
   width: 0;
   height: 0;
 }
-.toggle-switch input:focus ~ span {
+.toggle-switch input:focus-visible ~ span {
   outline: 3px solid;
   outline-color: var(--theme-slider-focus);
   background-image: var(--theme-slider-hover);
