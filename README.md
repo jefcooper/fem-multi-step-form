@@ -26,17 +26,13 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 ### Screenshots
 
-![Desktop Page 1](./screenshots/desktop-screenshot-page-1.webp)
-![Desktop Page 2](./screenshots/desktop-screenshot-page-2.webp)
-![Desktop Page 3](./screenshots/desktop-screenshot-page-3.webp)
-![Desktop Page 4](./screenshots/desktop-screenshot-page-4.webp)
-![Desktop Page 5](./screenshots/desktop-screenshot-page-5.webp)
+![Desktop Page 1](./screenshots/screenshot-desktop-page-1.webp)
+![Desktop Page 2](./screenshots/screenshot-desktop-page-2.webp)
+![Desktop Page 3](./screenshots/screenshot-desktop-page-3.webp)
+![Desktop Page 4](./screenshots/screenshot-desktop-page-4.webp)
+![Desktop Page 5](./screenshots/screenshot-desktop-page-5.webp)
 
-![Mobile Page 1](./screenshots/mobile-screenshot-page-1.webp)
-![Mobile Page 2](./screenshots/mobile-screenshot-page-2.webp)
-![Mobile Page 3](./screenshots/mobile-screenshot-page-3.webp)
-![Mobile Page 4](./screenshots/mobile-screenshot-page-4.webp)
-![Mobile Page 5](./screenshots/mobile-screenshot-page-5.webp)
+![Mobile Page 1](./screenshots/screenshot-mobile.webp)
 
 
 ### Links
