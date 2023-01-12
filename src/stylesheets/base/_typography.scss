@@ -129,8 +129,8 @@
 .input-text {
   font-family: abstracts.$ff-base;
   font-weight: abstracts.$fw-medium;
-  font-size: abstracts.pxToRem(15px);
-  line-height: abstracts.pxLineHeight(15px, 17px);
+  font-size: abstracts.pxToRem(16px);
+  line-height: abstracts.pxLineHeight(16px, 17px);
   color: var(--theme-input-clr);
 }
 

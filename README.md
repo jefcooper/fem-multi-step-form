@@ -80,6 +80,7 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 - https://www.w3.org/WAI/tutorials/forms/multi-page/
 - https://a11y-guidelines.orange.com/en/articles/using-aria-current-attribute/
 - https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reportValidity
+- https://www.w3docs.com/snippets/css/how-to-disable-zoom-on-a-mobile-web-page-using-html-and-css.html
 
 #### Tooling
 
