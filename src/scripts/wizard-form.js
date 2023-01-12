@@ -93,7 +93,6 @@ btnChange?.addEventListener("click", (evt) => {
 
 // show initial form step
 showFormStep(currentStep, steps);
-btnNext.focus();
 
 /**
  * getFormSteps
@@ -115,9 +114,11 @@ function showFormStep(stepNumber, allSteps) {
       step.style.display = "grid";
       const onShowFn = step.getAttribute("data-wizard-form-on-show");
 
+      // set focus to first autofocus element if present in tab
+      step.querySelector("[autofocus]")?.focus();
+
       if (onShowFn) {
         // call this named function on the global window context
-        console.log("Call function: " + onShowFn);
         window[onShowFn]?.();
       }
     } else {

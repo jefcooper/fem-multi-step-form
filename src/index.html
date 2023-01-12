@@ -61,7 +61,7 @@
           <label for="your-info__name" class="form--label input__label">
             Name
           </label>
-          <input required type="text" name="personal-name" id="your-info__name" class="input your-info__name"
+          <input autofocus required type="text" name="personal-name" id="your-info__name" class="input your-info__name"
             placeholder="e.g. Stephen King">
           <label for="your-info__name" class="input__label your-info__error-label">This field is required</label>
         </div>
@@ -93,7 +93,7 @@
 
         <fieldset class="radio-card__fieldset select-plan__fieldset" id="select-plan__fieldset" data-plan-type>
           <legend class="visually-hidden">Plan Type</legend>
-          <input type="radio" name="plan" value="arcade" id="select-plan__arcade" class="radio-card__input">
+          <input autofocus type="radio" name="plan" value="arcade" id="select-plan__arcade" class="radio-card__input">
           <label for="select-plan__arcade" class="radio-card__label select-plan__label">
             <img class="icon--arcade" src="assets/icon-arcade.svg" alt="" aria-hidden="true">
             <span class="heading--4 select-plan__caption">Arcade</span>
@@ -146,7 +146,7 @@
         <fieldset class="add-ons__fieldset" data-plan-type>
           <legend class="visually-hidden">Plan option selections</legend>
           <div class="checkbox-card">
-            <input type="checkbox" name="option-games" id="options--games" class="add-ons-checkbox">
+            <input autofocus type="checkbox" name="option-games" id="options--games" class="add-ons-checkbox">
             <label for="options--games" class="checkbox-card__label">
               <span class="heading--5 add-ons__name">
                 Online service
@@ -209,20 +209,6 @@
           Double-check everything looks OK before confirming.
         </p>
 
-        <!-- Dynamically add subscription and add-on selections here -->
-        <div class="summary" id="confirmation"></div>
-
-        <!--
-*************** grey ******************
-* Arcade (Yearly)              $90/yr
-* Change
-* -----------------------------------
-* Online service              +$10/yr
-* Larger storage              +$20/yr
-***************************************
-
-Total (per year)              $120/yr
-        -->
         <div class="summary">
           <div class="summary__detail">
             <div class="summary__selected-plan" data-summary-plan>
