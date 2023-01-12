@@ -37,11 +37,7 @@
 .radio-card__input {
   @include base.visually-hidden-mixin;
 }
-.radio-card__fieldset {
-}
-.radio-card__fieldset:focus {
-}
-.radio-card__input:focus + .radio-card__label {
+.radio-card__input:focus-visible + .radio-card__label {
   outline: 1px solid;
   outline-color: var(--theme-radio-card-hover-border);
 }
