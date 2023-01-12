@@ -7,21 +7,19 @@
  *
  ******************************************************************************/
 
-const confirmationEl = document.getElementById("confirmation");
-const summaryPlanEl = document.querySelector("[data-summary-plan]");
-const summaryAddOnsEl = document.querySelector("[data-summary-add-ons]");
-const summaryTotalEl = document.querySelector("[data-summary-total]");
-
 function populateConfirmation() {
   const formEl = document.getElementById("wizard-form"); // get the form we intend to modify
-  const docEl = document.getElementById("confirmation"); // get the node that will hold the text
+  const summaryPlanEl = document.querySelector("[data-summary-plan]");
+  const summaryAddOnsEl = document.querySelector("[data-summary-add-ons]");
+  const summaryTotalEl = document.querySelector("[data-summary-total]");
 
-  if (docEl) {
+  if (formEl) {
     const formData = new FormData(formEl);
-    createConfirmation(formData);
-
-    //docEl.innerText = ""; // first clear any content, this is fastest method
-    //docEl.appendChild(confirmationDiv);
+    createConfirmation(formData, {
+      summaryPlan: summaryPlanEl,
+      summaryAddOns: summaryAddOnsEl,
+      summaryTotal: summaryTotalEl,
+    });
   }
 }
 
@@ -87,12 +85,7 @@ const optionPricing = {
     yearly: 20,
   },
 };
-function createConfirmation(formData) {
-  // for debugging, list all entries
-  formData.forEach((val, key) => {
-    console.log("form data, key: " + key + "=" + val);
-  });
-
+function createConfirmation(formData, elements) {
   // Pricing calculations
   const plan = formData.get("plan") || "arcade";
   const term = formData.has("plan-yearly") ? "yearly" : "monthly";
@@ -121,9 +114,9 @@ function createConfirmation(formData) {
   let changeBtn;
 
   // clear the summary element of all children
-  Array.from(summaryPlanEl.children).forEach((el) => {
+  Array.from(elements.summaryPlan.children).forEach((el) => {
     if (el.tagName === "P") {
-      summaryPlanEl.removeChild(el);
+      elements.summaryPlan.removeChild(el);
     } else if (el.tagName === "BUTTON") {
       changeBtn = el;
     }
@@ -135,15 +128,15 @@ function createConfirmation(formData) {
     .text(formatPrice(planPrice, term))
     .class("summary__price")
     .class("heading--6")
-    .insertBefore(summaryPlanEl, changeBtn);
+    .insertBefore(elements.summaryPlan, changeBtn);
 
   new Element("p")
     .text(planText)
     .class("summary__plan")
     .class("heading--5")
-    .insertBefore(summaryPlanEl, changeBtn);
+    .insertBefore(elements.summaryPlan, changeBtn);
 
-  summaryAddOnsEl.innerText = "";
+  elements.summaryAddOns.innerText = "";
 
   // online service
   if (formData.has("option-games")) {
@@ -151,13 +144,13 @@ function createConfirmation(formData) {
       .text("Online service")
       .class("summary__option")
       .class("text--2")
-      .addTo(summaryAddOnsEl);
+      .addTo(elements.summaryAddOns);
 
     new Element("p")
       .text(formatOptionPrice(optionPricing["option-games"][term], term))
       .class("summary__option-price")
       .class("text--2")
-      .addTo(summaryAddOnsEl);
+      .addTo(elements.summaryAddOns);
   }
 
   // larger storage
@@ -166,13 +159,13 @@ function createConfirmation(formData) {
       .text("Larger storage")
       .class("summary__option")
       .class("text--2")
-      .addTo(summaryAddOnsEl);
+      .addTo(elements.summaryAddOns);
 
     new Element("p")
       .text(formatOptionPrice(optionPricing["option-storage"][term], term))
       .class("summary__option-price")
       .class("text--2")
-      .addTo(summaryAddOnsEl);
+      .addTo(elements.summaryAddOns);
   }
 
   // profile
@@ -181,28 +174,28 @@ function createConfirmation(formData) {
       .text("Customizable profile")
       .class("summary__option")
       .class("text--2")
-      .addTo(summaryAddOnsEl);
+      .addTo(elements.summaryAddOns);
 
     new Element("p")
       .text(formatOptionPrice(optionPricing["option-theme"][term], term))
       .class("summary__option-price")
       .class("text--2")
-      .addTo(summaryAddOnsEl);
+      .addTo(elements.summaryAddOns);
   }
 
-  summaryTotalEl.innerText = "";
+  elements.summaryTotal.innerText = "";
 
   new Element("p")
     .text("Total (per " + term + ")")
     .class("summary__total-plan")
     .class("text--2")
-    .addTo(summaryTotalEl);
+    .addTo(elements.summaryTotal);
 
   new Element("p")
     .text("+" + formatPrice(totalPrice, term))
     .class("summary__total-price")
     .class("heading--7")
-    .addTo(summaryTotalEl);
+    .addTo(elements.summaryTotal);
 }
 
 function capitalize(str) {
