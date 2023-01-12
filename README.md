@@ -55,29 +55,18 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 ### What I learned
 
-- There are a couple of main camps, one is using DOM manipulation to attach template fragments to a div. The other is one wide form where pages get scrolled into view like a carousel.
-- The carousel approach has some drawbacks in that page visibility needs to be carefully managed.
-- Fromm the W3 Schools page, it appears the carousel approach requires managing the display property on tabs and display: none on tabs that are off screen. This doesn't affect form state and no data is lost when submitting the form. Data from hidden tabs is still sent.
-- The W3 approach lacks the ability to show a side-scrolling animation, however, this can be fixed up by watching for the animationend event and setting display: none once the animated scroll out of view is completed.
-- Can force native form validation through javascript
+- Can force native form validation through javascript using the reportValidity() method on the form DOM element.  This returns true/false, true if valid, false if invalid.  As well, the :invalid is set on the failing form elements and this can in turn be used for styling the failed element.
+- Native form validation is preferred for accessibility and focusing on the failed input field is automatic.
+- There is a drawback in that the invalid state is by default shown on initial form load for empty required fields.  This has been changed in my implementation by setting a data- element on the form to indicate if the validation passed/failed, but only after the next button is pressed.
+- This challenge had a lot of individual pieces including custom styled components for input, radio, checkbox.
+- The programmatic page navigation had a lot of edge cases, such as needing a dynamic callback when a tab is shown in order to register event handlers... you can't register an event handler on a hidden DOM element.
 
 ### Outline of Chosen Approach
 
 1. Use a multiple tab approach where each tab is a <section> within a form
 2. Use data- attributes to attach script to the form and buttons to manipulate state
 
-### Todo
-
-- ~~Toggle switch needs work to highlight monthly / yearly. Need to change around the labels so they all follow the input checkbox. Since the visible slider is a label, this should be possible.~~
-- ~~Fix up typography, it's gotten away from me!~~
-- Custom checkbox so that it can have purple color. (leaving it blue for now)
-- ~~Field validation on Your Info page~~
-- ~~Finishing Up page, need to generate plan summary text and figure out how this interacts with FormData.~~
-- ~~Figure out what to do on Confirm, do I really post or not?~~Fixed, no buttons shown on Thank You, confirm on second last page. Posting left as an exercise, but can be done programmatically on click.
-
 ### Bugs and Finishing Steps
-
-- focus on checkbox is now showing, need to hide that because we're showing custom focus on label instead.
 
 ### Design Alterations
 
