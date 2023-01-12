@@ -49,7 +49,7 @@
   .signup-wizard {
     --_max-width: 940px;
     --_min-margin: 1rem;
-    position: relative;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     display: grid;
