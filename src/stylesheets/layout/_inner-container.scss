@@ -1,0 +1,36 @@
+@use "../abstracts";
+
+.inner-container {
+  position: relative;
+  top: 6rem;
+  display: grid;
+  gap: 1.5rem;
+
+  margin-inline: 1rem;
+  margin-bottom: 400px;
+  padding-inline: 1rem;
+  padding-block: 2rem;
+
+  border-radius: 15px;
+
+  background-color: var(--theme-signup-bg);
+  box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0951141);
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include abstracts.media-breakpoint("tablet") {
+  .inner-container {
+    top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    box-shadow: none;
+    background-color: unset;
+    margin-block: 1rem;
+    margin-inline: 2rem;
+    padding-inline: 1.5rem;
+    align-content: space-between;
+    gap: 0;
+  }
+}

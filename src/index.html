@@ -20,234 +20,243 @@
 
 <body class="theme--default body">
   <main class="signup-wizard">
-    <aside class="wizard-form__steps">
-      <ol class="wizard-form__steps-list" data-wizard-steps>
-        <li class="wizard-form__step">
-          <div class="wizard-form__step-group">
-            <div class="wizard-form__step-count"></div>
-            <div class="wizard-form__step-description">Your info</div>
-          </div>
-        </li>
-        <li class="wizard-form__step">
-          <div class="wizard-form__step-group">
-            <div class="wizard-form__step-count"></div>
-            <div class="wizard-form__step-description">Select plan</div>
-          </div>
-        </li>
-        <li class="wizard-form__step">
-          <div class="wizard-form__step-group">
-            <div class="wizard-form__step-count"></div>
-            <div class="wizard-form__step-description">Add-ons</div>
-          </div>
-        </li>
-        <li class="wizard-form__step">
-          <div class="wizard-form__step-group">
-            <div class="wizard-form__step-count"></div>
-            <div class="wizard-form__step-description">Summary</div>
-          </div>
-        </li>
-      </ol>
-    </aside>
+    <div class="outer-container">
 
-    <form action="#" id="wizard-form" class="wizard-form" data-wizard-form>
-      <section class="wizard-form__tab your-info">
-        <!-- Step 1 start -->
-        <h1 class="heading--1 signup-wizard__title">Personal info</h1>
-
-        <p class="text--1 signup-wizard__subtitle">
-          Please provide your name, email address, and phone number.
-        </p>
-
-        <div class="input__group">
-          <label for="your-info__name" class="form--label input__label">
-            Name
-          </label>
-          <input data-autofocus required type="text" name="personal-name" id="your-info__name"
-            class="input your-info__name" placeholder="e.g. Stephen King">
-          <label for="your-info__name" class="input__label your-info__error-label">This field is required</label>
-        </div>
-
-        <div class="input__group">
-          <label for="your-info__email" class="input__label form--label">Email Address</label>
-          <input required type="email" name="personal-email" id="your-info__email" class="input your-info__email"
-            placeholder="e.g. stephenking@lorem.com">
-          <label for="your-info__name" class="input__label your-info__error-label">This must be a valid email
-            address</label>
-        </div>
-
-        <div class="input__group">
-          <label for="your-info__phone" class="form--label input__label">Phone Number</label>
-          <input required type="tel" pattern="\+?[0-9]+([- ]?[0-9()]+)+" name="personal-tel" id="your-info__tel"
-            class="input your-info__tel" placeholder="e.g. +1 234 567 890">
-          <label for="your-info__name" class="input__label your-info__error-label">This must be a valid
-            telephone</label>
-        </div>
-      </section>
-      <section class="wizard-form__tab select-plan">
-        <!-- Step 2 start -->
-        <h1 class="heading--1 signup-wizard__title">
-          Select your plan
-        </h1>
-        <p class="text--1 signup-wizard__subtitle">
-          You have the option of monthly or yearly billing.
-        </p>
-
-        <fieldset class="radio-card__fieldset select-plan__fieldset" id="select-plan__fieldset" data-plan-type>
-          <legend class="visually-hidden">Plan Type</legend>
-          <input data-autofocus type="radio" name="plan" value="arcade" id="select-plan__arcade"
-            class="radio-card__input">
-          <label for="select-plan__arcade" class="radio-card__label select-plan__label">
-            <img class="icon--arcade" src="assets/icon-arcade.svg" alt="" aria-hidden="true">
-            <span class="heading--4 select-plan__caption">Arcade</span>
-            <span class="text--2 select-plan--monthly">$9/mo</span>
-            <span class="text--2 select-plan--yearly">$90/yr</span>
-            <span class="text--3 select-plan--yearly">2 months free</span>
-          </label>
-
-          <input data-autofocus type="radio" name="plan" value="advanced" id="select-plan__advanced"
-            class="radio-card__input">
-          <label for="select-plan__advanced" class="radio-card__label select-plan__label">
-            <img class="icon--advanced" src="assets/icon-advanced.svg" alt="" aria-hidden="true">
-            <span class="heading--4 select-plan__caption">Advanced</span>
-            <span class="text--2 select-plan--monthly">$12/mo</span>
-            <span class="text--2 select-plan--yearly">$120/yr</span>
-            <span class="text--3 select-plan--yearly">2 months free</span>
-          </label>
-
-          <input data-autofocus type="radio" name="plan" value="pro" id="select-plan__pro" class="radio-card__input">
-          <label for="select-plan__pro" class="radio-card__label select-plan__label">
-            <img class="icon--pro" src="assets/icon-pro.svg" alt="" aria-hidden="true">
-            <span class="heading--4 select-plan__caption">Pro</span>
-            <span class="text--2 select-plan--monthly">$15/mo</span>
-            <span class="text--2 select-plan--yearly">$150/yr</span>
-            <span class="text--3 select-plan--yearly">2 months free</span>
-          </label>
-        </fieldset>
-
-        <div class="select-plan__term-toggle" id="select-plan__term-toggle" data-plan-type>
-          <label aria-label="select yearly plan" for="select-plan__term-toggle-switch"
-            class="select-plan__term-toggle-label select-plan__highlight--monthly">Monthly</label>
-          <label class="toggle-switch">
-            <input type="checkbox" id="select-plan__term-toggle-switch" name="plan-yearly">
-            <span class="toggle-switch__slider"></span>
-          </label>
-          <label aria-hidden="true" for="select-plan__term-toggle-switch"
-            class="select-plan__term-toggle-label select-plan__highlight--yearly">Yearly</label>
-        </div>
-
-      </section>
-
-      <section class="wizard-form__tab add-ons">
-        <!-- Step 3 start -->
-        <h1 class="heading--1 signup-wizard__title">
-          Pick add-ons
-        </h1>
-        <p class="text--1 signup-wizard__subtitle">
-          Add-ons help enhance your gaming experience.
-        </p>
-
-        <fieldset class="add-ons__fieldset" data-plan-type>
-          <legend class="visually-hidden">Plan option selections</legend>
-          <div class="checkbox-card">
-            <input data-autofocus type="checkbox" name="option-games" id="options--games" class="add-ons-checkbox">
-            <label for="options--games" class="checkbox-card__label">
-              <span class="heading--5 add-ons__name">
-                Online service
-              </span>
-              <span class="text--4 add-ons__description">
-                Access to multiplayer games
-              </span>
-              <span class="text--4 add-ons__price add-ons--monthly">
-                +$1/mo
-              </span>
-              <span class="text--4 add-ons__price add-ons--yearly">
-                +$10/yr
-              </span>
-            </label>
-          </div>
-
-          <div class="checkbox-card">
-            <input data-autofocus type="checkbox" name="option-storage" id="options--storage" class="add-ons-checkbox">
-            <label for="options--storage" class="checkbox-card__label">
-              <span class="heading--5 add-ons__name">
-                Larger storage
-              </span>
-              <span class="text--4 add-ons__description">
-                Extra 1TB of cloud save
-              </span>
-              <span class="text--4 add-ons__price add-ons--monthly">
-                +$2/mo
-              </span>
-              <span class="text--4 add-ons__price add-ons--yearly">
-                +$20/yr
-              </span>
-            </label>
-          </div>
-
-          <div class="checkbox-card">
-            <input data-autofocus type="checkbox" name="option-theme" id="options--theme" class="add-ons-checkbox">
-            <label for="options--theme" class="checkbox-card__label">
-              <span class="heading--5 add-ons__name">
-                Customizable Profile
-              </span>
-              <span class="text--4 add-ons__description">
-                Custom theme on your profile
-              </span>
-              <span class="text--4 add-ons__price add-ons--monthly">
-                +$2/mo
-              </span>
-              <span class="text--4 add-ons__price add-ons--yearly">
-                +$20/yr
-              </span>
-            </label>
-          </div>
-        </fieldset>
-      </section>
-      <section class="wizard-form__tab summary" data-wizard-form-on-show="populateConfirmation">
-        <!-- Step 4 start -->
-        <h1 class="heading--1 signup-wizard__title">
-          Finishing up
-        </h1>
-        <p class="text--1 signup-wizard__subtitle">
-          Double-check everything looks OK before confirming.
-        </p>
-
-        <div class="summary">
-          <div class="summary__detail">
-            <div class="summary__selected-plan" data-summary-plan>
-              <button type="button" class="summary__change btn" data-wizard-form-change>Change</button>
+      <aside class="wizard-form__steps">
+        <ol class="wizard-form__steps-list" data-wizard-steps>
+          <li class="wizard-form__step">
+            <div class="wizard-form__step-group">
+              <div class="wizard-form__step-count"></div>
+              <div class="wizard-form__step-description">Your info</div>
             </div>
-            <div class="summary__add-ons" data-summary-add-ons>
+          </li>
+          <li class="wizard-form__step">
+            <div class="wizard-form__step-group">
+              <div class="wizard-form__step-count"></div>
+              <div class="wizard-form__step-description">Select plan</div>
             </div>
-          </div>
-          <div class="summary__total" data-summary-total>
-          </div>
+          </li>
+          <li class="wizard-form__step">
+            <div class="wizard-form__step-group">
+              <div class="wizard-form__step-count"></div>
+              <div class="wizard-form__step-description">Add-ons</div>
+            </div>
+          </li>
+          <li class="wizard-form__step">
+            <div class="wizard-form__step-group">
+              <div class="wizard-form__step-count"></div>
+              <div class="wizard-form__step-description">Summary</div>
+            </div>
+          </li>
+        </ol>
+      </aside>
+
+      <div class="inner-container">
+
+        <form action="#" id="wizard-form" class="wizard-form" data-wizard-form>
+          <section class="wizard-form__tab your-info">
+            <!-- Step 1 start -->
+            <h1 class="heading--1 signup-wizard__title">Personal info</h1>
+
+            <p class="text--1 signup-wizard__subtitle">
+              Please provide your name, email address, and phone number.
+            </p>
+
+            <div class="input__group">
+              <label for="your-info__name" class="form--label input__label">
+                Name
+              </label>
+              <input data-autofocus required type="text" name="personal-name" id="your-info__name"
+                class="input your-info__name" placeholder="e.g. Stephen King">
+              <label for="your-info__name" class="input__label your-info__error-label">This field is required</label>
+            </div>
+
+            <div class="input__group">
+              <label for="your-info__email" class="input__label form--label">Email Address</label>
+              <input required type="email" name="personal-email" id="your-info__email" class="input your-info__email"
+                placeholder="e.g. stephenking@lorem.com">
+              <label for="your-info__name" class="input__label your-info__error-label">This must be a valid email
+                address</label>
+            </div>
+
+            <div class="input__group">
+              <label for="your-info__phone" class="form--label input__label">Phone Number</label>
+              <input required type="tel" pattern="\+?[0-9]+([- ]?[0-9()]+)+" name="personal-tel" id="your-info__tel"
+                class="input your-info__tel" placeholder="e.g. +1 234 567 890">
+              <label for="your-info__name" class="input__label your-info__error-label">This must be a valid
+                telephone</label>
+            </div>
+          </section>
+          <section class="wizard-form__tab select-plan">
+            <!-- Step 2 start -->
+            <h1 class="heading--1 signup-wizard__title">
+              Select your plan
+            </h1>
+            <p class="text--1 signup-wizard__subtitle">
+              You have the option of monthly or yearly billing.
+            </p>
+
+            <fieldset class="radio-card__fieldset select-plan__fieldset" id="select-plan__fieldset" data-plan-type>
+              <legend class="visually-hidden">Plan Type</legend>
+              <input data-autofocus type="radio" name="plan" value="arcade" id="select-plan__arcade"
+                class="radio-card__input">
+              <label for="select-plan__arcade" class="radio-card__label select-plan__label">
+                <img class="icon--arcade" src="assets/icon-arcade.svg" alt="" aria-hidden="true">
+                <span class="heading--4 select-plan__caption">Arcade</span>
+                <span class="text--2 select-plan--monthly">$9/mo</span>
+                <span class="text--2 select-plan--yearly">$90/yr</span>
+                <span class="text--3 select-plan--yearly">2 months free</span>
+              </label>
+
+              <input data-autofocus type="radio" name="plan" value="advanced" id="select-plan__advanced"
+                class="radio-card__input">
+              <label for="select-plan__advanced" class="radio-card__label select-plan__label">
+                <img class="icon--advanced" src="assets/icon-advanced.svg" alt="" aria-hidden="true">
+                <span class="heading--4 select-plan__caption">Advanced</span>
+                <span class="text--2 select-plan--monthly">$12/mo</span>
+                <span class="text--2 select-plan--yearly">$120/yr</span>
+                <span class="text--3 select-plan--yearly">2 months free</span>
+              </label>
+
+              <input data-autofocus type="radio" name="plan" value="pro" id="select-plan__pro"
+                class="radio-card__input">
+              <label for="select-plan__pro" class="radio-card__label select-plan__label">
+                <img class="icon--pro" src="assets/icon-pro.svg" alt="" aria-hidden="true">
+                <span class="heading--4 select-plan__caption">Pro</span>
+                <span class="text--2 select-plan--monthly">$15/mo</span>
+                <span class="text--2 select-plan--yearly">$150/yr</span>
+                <span class="text--3 select-plan--yearly">2 months free</span>
+              </label>
+            </fieldset>
+
+            <div class="select-plan__term-toggle" id="select-plan__term-toggle" data-plan-type>
+              <label aria-label="select yearly plan" for="select-plan__term-toggle-switch"
+                class="select-plan__term-toggle-label select-plan__highlight--monthly">Monthly</label>
+              <label class="toggle-switch">
+                <input type="checkbox" id="select-plan__term-toggle-switch" name="plan-yearly">
+                <span class="toggle-switch__slider"></span>
+              </label>
+              <label aria-hidden="true" for="select-plan__term-toggle-switch"
+                class="select-plan__term-toggle-label select-plan__highlight--yearly">Yearly</label>
+            </div>
+
+          </section>
+
+          <section class="wizard-form__tab add-ons">
+            <!-- Step 3 start -->
+            <h1 class="heading--1 signup-wizard__title">
+              Pick add-ons
+            </h1>
+            <p class="text--1 signup-wizard__subtitle">
+              Add-ons help enhance your gaming experience.
+            </p>
+
+            <fieldset class="add-ons__fieldset" data-plan-type>
+              <legend class="visually-hidden">Plan option selections</legend>
+              <div class="checkbox-card">
+                <input data-autofocus type="checkbox" name="option-games" id="options--games" class="add-ons-checkbox">
+                <label for="options--games" class="checkbox-card__label">
+                  <span class="heading--5 add-ons__name">
+                    Online service
+                  </span>
+                  <span class="text--4 add-ons__description">
+                    Access to multiplayer games
+                  </span>
+                  <span class="text--4 add-ons__price add-ons--monthly">
+                    +$1/mo
+                  </span>
+                  <span class="text--4 add-ons__price add-ons--yearly">
+                    +$10/yr
+                  </span>
+                </label>
+              </div>
+
+              <div class="checkbox-card">
+                <input data-autofocus type="checkbox" name="option-storage" id="options--storage"
+                  class="add-ons-checkbox">
+                <label for="options--storage" class="checkbox-card__label">
+                  <span class="heading--5 add-ons__name">
+                    Larger storage
+                  </span>
+                  <span class="text--4 add-ons__description">
+                    Extra 1TB of cloud save
+                  </span>
+                  <span class="text--4 add-ons__price add-ons--monthly">
+                    +$2/mo
+                  </span>
+                  <span class="text--4 add-ons__price add-ons--yearly">
+                    +$20/yr
+                  </span>
+                </label>
+              </div>
+
+              <div class="checkbox-card">
+                <input data-autofocus type="checkbox" name="option-theme" id="options--theme" class="add-ons-checkbox">
+                <label for="options--theme" class="checkbox-card__label">
+                  <span class="heading--5 add-ons__name">
+                    Customizable Profile
+                  </span>
+                  <span class="text--4 add-ons__description">
+                    Custom theme on your profile
+                  </span>
+                  <span class="text--4 add-ons__price add-ons--monthly">
+                    +$2/mo
+                  </span>
+                  <span class="text--4 add-ons__price add-ons--yearly">
+                    +$20/yr
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+          </section>
+          <section class="wizard-form__tab summary" data-wizard-form-on-show="populateConfirmation">
+            <!-- Step 4 start -->
+            <h1 class="heading--1 signup-wizard__title">
+              Finishing up
+            </h1>
+            <p class="text--1 signup-wizard__subtitle">
+              Double-check everything looks OK before confirming.
+            </p>
+
+            <div class="summary">
+              <div class="summary__detail">
+                <div class="summary__selected-plan" data-summary-plan>
+                  <button type="button" class="summary__change btn" data-wizard-form-change>Change</button>
+                </div>
+                <div class="summary__add-ons" data-summary-add-ons>
+                </div>
+              </div>
+              <div class="summary__total" data-summary-total>
+              </div>
+            </div>
+          </section>
+
+          <section class="wizard-form__tab thankyou">
+
+            <img class="icon--thank-you" src="/assets/icon-thank-you.svg" alt="checkbox">
+            <!-- Step 5 start -->
+            <h1 class="heading--1">
+              Thank you!
+            </h1>
+
+            <p class="text--1">
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free
+              to email us at support@loremgaming.com.
+            </p>
+          </section>
+        </form>
+
+        <div class="signup-wizard__buttons">
+          <button type="button" class="btn wizard-form__btn-previous" data-wizard-form-previous>Go Back</button>
+          <button type="button" class="btn btn--secondary wizard-form__btn-next" data-wizard-form-next>Next
+            Step</button>
+          <button type="button" class="btn btn--primary wizard-form__btn-finished" data-wizard-form-finished
+            form="wizard-form">Confirm</button>
         </div>
-      </section>
+      </div>
 
-      <section class="wizard-form__tab thankyou">
-
-        <img class="icon--thank-you" src="/assets/icon-thank-you.svg" alt="checkbox">
-        <!-- Step 5 start -->
-        <h1 class="heading--1">
-          Thank you!
-        </h1>
-
-        <p class="text--1">
-          Thanks for confirming your subscription! We hope you have fun
-          using our platform. If you ever need support, please feel free
-          to email us at support@loremgaming.com.
-        </p>
-      </section>
-    </form>
-
-    <div class="signup-wizard__buttons">
-      <button type="button" class="btn wizard-form__btn-previous" data-wizard-form-previous>Go Back</button>
-      <button type="button" class="btn btn--secondary wizard-form__btn-next" data-wizard-form-next>Next Step</button>
-      <button type="button" class="btn btn--primary wizard-form__btn-finished" data-wizard-form-finished
-        form="wizard-form">Confirm</button>
     </div>
-
   </main>
 
 </body>
